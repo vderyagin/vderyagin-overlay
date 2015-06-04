@@ -10,8 +10,8 @@ DESCRIPTION="Personal storage system for life"
 HOMEPAGE="http://camlistore.org"
 
 LICENSE="Apache-2.0"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
-KEYWORDS=""
 
 IUSE=""
 
