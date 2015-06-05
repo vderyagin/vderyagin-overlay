@@ -20,18 +20,10 @@ DEPEND=">=dev-lang/go-1.1"
 EGIT_REPO_URI="https://github.com/camlistore/camlistore.git"
 
 src_compile() {
-  go run make.go || die "build failed"
+	go run make.go || die "build failed"
 }
 
 src_install() {
 	cd bin
-	dobin "camdeploy"
-	dobin "camget"
-	dobin "camlistored"
-	dobin "cammount"
-	dobin "camput"
-	dobin "camtool"
-	dobin "devcam"
-	dobin "hello"
-	dobin "publisher"
+	dobin camdeploy camget camlistored cammount camput camtool devcam hello publisher
 }
