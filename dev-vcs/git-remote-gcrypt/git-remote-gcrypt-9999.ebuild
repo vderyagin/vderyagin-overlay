@@ -14,11 +14,11 @@ EGIT_REPO_URI="https://github.com/joeyh/git-remote-gcrypt"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="rsync curl"
 
 RDEPEND="
-	net-misc/rsync
-	net-misc/curl
+	rsync? ( net-misc/rsync )
+	curl? ( net-misc/curl )
 	app-crypt/gnupg
 	dev-vcs/git
 "
