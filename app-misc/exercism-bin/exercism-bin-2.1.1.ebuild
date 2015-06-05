@@ -19,7 +19,7 @@ IUSE=""
 src_unpack() {
 	mkdir "${S}"
 	cd "${S}"
-	unpack "${A}"
+	unpack ${A}
 }
 
 src_install() {
