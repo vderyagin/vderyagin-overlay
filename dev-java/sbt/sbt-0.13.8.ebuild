@@ -25,5 +25,5 @@ src_unpack() {
 
 src_install() {
 	java-pkg_dojar "bin/sbt-launch.jar"
-	java-pkg_dolauncher sbt --main xsbt.boot.Boot --java_args "-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=512M -jar /usr/share/sbt/lib/sbt-launch.jar \"\$@\""
+	dobin "${FILESDIR}/sbt" "${FILESDIR}/screpl" "${FILESDIR}/scalas"
 }
