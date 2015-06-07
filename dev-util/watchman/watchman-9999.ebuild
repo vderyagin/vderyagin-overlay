@@ -13,14 +13,14 @@ EGIT_REPO_URI="https://github.com/facebook/watchman.git"
 LICENSE="Apache-2.0"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE=""
+IUSE="python"
 
-RDEPEND="x11-libs/libxcb"
+RDEPEND="python? ( dev-lang/python:* )"
 DEPEND="${RDEPEND}"
 
 DOCS="README.markdown"
 
 src_configure() {
 	./autogen.sh
-	econf
+	econf --enable-lenient $(use_with python)
 }
