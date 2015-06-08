@@ -4,7 +4,6 @@
 
 EAPI=5
 
-
 DESCRIPTION="The Dart SDK, including the VM, dart2js, core libraries, and more"
 HOMEPAGE="https://dartlang.org"
 SRC_URI="
@@ -28,7 +27,7 @@ src_unpack() {
 }
 
 src_install() {
-	dodir "${ROOT}/opt/${P}"
+	dodir "/opt/${P}"
 	cp -R "bin" "include" "lib" "${D}/opt/${P}"
 	newenvd "${FILESDIR}/${P}-PATH.env" "81${PN}"
 	dodoc ${DOCS}

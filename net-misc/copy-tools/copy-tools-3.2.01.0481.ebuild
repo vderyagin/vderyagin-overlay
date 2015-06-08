@@ -28,7 +28,7 @@ src_install() {
 		die "unsupported architecture"
 	fi
 
-	dodir "${ROOT}/opt/${P}"
+	dodir "/opt/${P}"
 	cp -R ${subdir}/* "${D}/opt/${P}"
 
 	newenvd "${FILESDIR}/${P}-PATH.env" "82${PN}"
