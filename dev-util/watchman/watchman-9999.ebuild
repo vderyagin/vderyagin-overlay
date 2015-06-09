@@ -18,9 +18,7 @@ IUSE="python"
 RDEPEND="python? ( dev-lang/python:* )"
 DEPEND="${RDEPEND}"
 
-DOCS="README.markdown"
-
 src_configure() {
 	./autogen.sh
-	econf --enable-lenient $(use_with python)
+	econf $(use_with python)
 }
