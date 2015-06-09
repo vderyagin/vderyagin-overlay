@@ -18,7 +18,7 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	mv $(basename ${A} .tar.bz2) ${S}
+	mv $(basename ${A} .tar.bz2) "${S}"
 }
 
 src_install() {
