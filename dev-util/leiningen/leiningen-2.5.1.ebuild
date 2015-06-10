@@ -15,6 +15,9 @@ IUSE=""
 
 RDEPEND="virtual/jdk:*"
 
+DOCS="CONTRIBUTING.md NEWS.md README.md TUTORIAL.md"
+
 src_install() {
 	dobin bin/lein
+	dodoc ${DOCS}
 }
