@@ -8,7 +8,7 @@ DESCRIPTION="Tool for automating Clojure projects without setting your hair on f
 HOMEPAGE="http://leiningen.org"
 SRC_URI="https://github.com/technomancy/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="MIT"
+LICENSE="EPL-1.0"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
