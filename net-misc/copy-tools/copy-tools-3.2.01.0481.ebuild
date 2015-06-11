@@ -13,8 +13,6 @@ KEYWORDS="~amd64 ~x86 ~arm"
 SLOT="0"
 IUSE=""
 
-RDEPEND=">=sys-libs/glibc-2.13"
-
 DOCS="README"
 
 src_install() {
