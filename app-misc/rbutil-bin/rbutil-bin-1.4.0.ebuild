@@ -10,6 +10,7 @@ SRC_URI="
 	amd64? ( http://download.rockbox.org/rbutil/linux/RockboxUtility-v1.4.0-64bit.tar.bz2 )
 	x86?   ( http://download.rockbox.org/rbutil/linux/RockboxUtility-v1.4.0.tar.bz2 )
 "
+RESTRICT="mirror"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86 ~arm"

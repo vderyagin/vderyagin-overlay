@@ -11,6 +11,7 @@ SRC_URI="
 	x86?   ( https://dl.ngrok.com/ngrok_2.0.19_linux_amd64.zip )
 	arm?   ( https://dl.ngrok.com/ngrok_2.0.19_linux_arm.zip )
 "
+RESTRICT="mirror"
 
 LICENSE="Apache-2.0"
 KEYWORDS="~amd64 ~x86 ~arm"

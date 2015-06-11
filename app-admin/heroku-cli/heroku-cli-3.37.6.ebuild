@@ -7,6 +7,7 @@ EAPI=5
 DESCRIPTION="A CLI interface to the Heroku Platform API"
 HOMEPAGE="https://toolbelt.heroku.com"
 SRC_URI="https://github.com/heroku/heroku/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
 
 LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"

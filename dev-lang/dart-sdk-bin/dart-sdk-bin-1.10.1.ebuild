@@ -10,6 +10,7 @@ SRC_URI="
 	amd64? ( https://storage.googleapis.com/dart-archive/channels/stable/release/45692/sdk/dartsdk-linux-x64-release.zip )
 	x86?   ( https://storage.googleapis.com/dart-archive/channels/stable/release/45692/sdk/dartsdk-linux-ia32-release.zip )
 "
+RESTRICT="mirror"
 
 LICENSE="BSD"
 KEYWORDS="~amd64 ~x86"

@@ -7,6 +7,7 @@ EAPI=5
 DESCRIPTION="Tool for automating Clojure projects without setting your hair on fire"
 HOMEPAGE="http://leiningen.org"
 SRC_URI="https://github.com/technomancy/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
 
 LICENSE="EPL-1.0"
 KEYWORDS="~amd64 ~x86"

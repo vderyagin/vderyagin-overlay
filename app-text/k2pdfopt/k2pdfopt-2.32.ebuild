@@ -10,6 +10,7 @@ SRC_URI="
 	amd64? ( https://googledrive.com/host/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE/${PN}_amd64-${PV}.tar.gz )
 	x86?   ( https://googledrive.com/host/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE/${PN}_x86-${PV}.tar.gz )
 "
+RESTRICT="mirror"
 
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"

@@ -10,6 +10,7 @@ SRC_URI="
 	amd64? ( https://github.com/exercism/cli/releases/download/v${PV}/exercism-linux-64bit.tgz )
 	x86?   ( https://github.com/exercism/cli/releases/download/v${PV}/exercism-linux-32bit.tgz )
 "
+RESTRICT="mirror"
 
 LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"

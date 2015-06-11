@@ -7,6 +7,7 @@ EAPI=5
 DESCRIPTION="Tools for interfacing with copy.com"
 HOMEPAGE="http://copy.com"
 SRC_URI="https://googledrive.com/host/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE/${P}.tar.gz"
+RESTRICT="mirror"
 
 LICENSE="public-domain"
 KEYWORDS="~amd64 ~x86 ~arm"

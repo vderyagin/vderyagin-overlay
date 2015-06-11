@@ -7,6 +7,7 @@ EAPI=5
 DESCRIPTION="Visual tool integrating several commandline JDK tools and lightweight profiling capabilities"
 HOMEPAGE="http://visualvm.java.net"
 SRC_URI="https://java.net/projects/visualvm/downloads/download/release138/visualvm_138.zip"
+RESTRICT="mirror"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
