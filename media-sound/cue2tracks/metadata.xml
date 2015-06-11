@@ -1,3 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata></pkgmetadata>
+<pkgmetadata>
+  <use>
+    <flag name="flake">
+      Enable support for <pkg>media-sound/flake</pkg> FLAC encoder
+    </flag>
+    <flag name="mac">
+      Support for Monkey's Audio compression format
+    </flag>
+    <flag name="tta">
+      Use <pkg>media-sound/ttaenc</pkg>
+    </flag>
+    <flag name="m4a">
+      Support MPEG 4 Audio compression format
+    </flag>
+  </use>
+</pkgmetadata>
