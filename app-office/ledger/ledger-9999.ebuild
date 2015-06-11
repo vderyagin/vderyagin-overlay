@@ -30,3 +30,10 @@ DEPEND="
 		>=sys-apps/texinfo-4.13
 	)
 "
+
+DOCS="README.md INSTALL.md CONTRIBUTING.md doc/GLOSSARY.md doc/NEWS"
+
+src_install() {
+	cmake-utils_src_install
+	doinfo doc/*.texi
+}
