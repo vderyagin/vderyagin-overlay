@@ -1,0 +1,17 @@
+- app-admin/google-cloud-sdk
+  - download https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz
+  - look into lib/googlecloudsdk/core/config.json file in archive
+- [[https://github.com/heroku/heroku/releases][app-admin/heroku-cli]]
+- [[https://github.com/exercism/cli/releases/][app-misc/exercism-bin]]
+- [[http://rockbox.org/wiki/RockboxUtility#Download][app-misc/rbutil-bin]]
+- [[http://willus.com/k2pdfopt/download][app-text/k2pdfopt]]
+- [[http://www.scala-sbt.org/download.html][dev-java/sbt]]
+- [[https://www.dartlang.org/downloads/archive][dev-lang/dart-sdk-bin]]
+- [[https://github.com/technomancy/leiningen/releases][dev-util/leiningen]]
+- [[http://visualvm.java.net/download.html][dev-util/visualvm-bin]]
+- net-misc/copy-tools
+  - download https://copy.com/install/linux/Copy.tgz
+  - close currently running version of CopyAgent (if any)
+  - launch CopyAgent from archive
+  - tray icon context menu → Preferences… → About
+- [[https://ngrok.com/download][net-misc/ngrok-bin]]
