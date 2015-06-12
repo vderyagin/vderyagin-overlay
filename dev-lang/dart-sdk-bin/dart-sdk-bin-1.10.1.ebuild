@@ -28,8 +28,8 @@ src_unpack() {
 }
 
 src_install() {
-	dodir "/opt/${P}"
-	cp -R "bin" "include" "lib" "${D}/opt/${P}"
-	newenvd "${FILESDIR}/${P}-PATH.env" "81${PN}"
+	dodir "/opt/${PN}"
+	cp -R "bin" "include" "lib" "${D}/opt/${PN}"
+	newenvd "${FILESDIR}/${PN}-PATH.env" "81${PN}"
 	dodoc ${DOCS}
 }
