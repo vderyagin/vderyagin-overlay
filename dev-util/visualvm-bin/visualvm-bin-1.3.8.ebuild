@@ -27,7 +27,7 @@ src_prepare() {
 }
 
 src_install() {
-	dodir "/opt/${P}"
-	cp -R */ "${D}/opt/${P}"
-	newenvd "${FILESDIR}/${P}-PATH.env" "84${PN}"
+	dodir "/opt/${PN}"
+	cp -R */ "${D}/opt/${PN}"
+	newenvd "${FILESDIR}/${PN}-PATH.env" "84${PN}"
 }
