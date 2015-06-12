@@ -24,8 +24,8 @@ src_unpack() {
 }
 
 src_install() {
-	dodir "/usr/share/${P}"
-	cp -R */ "${D}/usr/share/${P}"
-	newenvd "${FILESDIR}/${P}-PATH.env" "78${PN}"
+	dodir "/usr/share/${PN}"
+	cp -R */ "${D}/usr/share/${PN}"
+	newenvd "${FILESDIR}/${PN}-PATH.env" "78${PN}"
 	dodoc ${DOCS}
 }
