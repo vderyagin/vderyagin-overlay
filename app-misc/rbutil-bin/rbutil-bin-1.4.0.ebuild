@@ -7,8 +7,8 @@ EAPI=5
 DESCRIPTION="Automated installer tool for Rockbox"
 HOMEPAGE="http://www.rockbox.org/wiki/RockboxUtility"
 SRC_URI="
-	amd64? ( http://download.rockbox.org/rbutil/linux/RockboxUtility-v1.4.0-64bit.tar.bz2 )
-	x86?   ( http://download.rockbox.org/rbutil/linux/RockboxUtility-v1.4.0.tar.bz2 )
+	amd64? ( http://download.rockbox.org/rbutil/linux/RockboxUtility-v${PV}-64bit.tar.bz2 )
+	x86?   ( http://download.rockbox.org/rbutil/linux/RockboxUtility-v${PV}.tar.bz2 )
 "
 RESTRICT="mirror"
 
