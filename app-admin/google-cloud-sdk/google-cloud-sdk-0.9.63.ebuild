@@ -24,8 +24,8 @@ src_compile() {
 }
 
 src_install() {
-	dodir "/usr/share/${P}"
-	cp -R */ "${D}/usr/share/${P}"
-	newenvd "${FILESDIR}/${P}.env" "73${PN}"
+	dodir "/usr/share/${PN}"
+	cp -R */ "${D}/usr/share/${PN}"
+	newenvd "${FILESDIR}/${PN}.env" "73${PN}"
 	dodoc ${DOCS}
 }
