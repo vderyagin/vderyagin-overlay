@@ -19,6 +19,10 @@ RDEPEND="dev-vcs/git"
 
 DOCS="AUTHORS Commands.md History.md Installation.md Readme.md"
 
+src_prepare() {
+	sed --in-place 's/${TMPDIR:-\/tmp}/\/tmp/' Makefile
+}
+
 src_compile() {
 	true
 }
