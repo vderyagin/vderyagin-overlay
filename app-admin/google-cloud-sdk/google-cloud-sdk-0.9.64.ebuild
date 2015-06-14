@@ -31,6 +31,11 @@ src_compile() {
 src_install() {
 	dodir "/usr/share/${PN}"
 	cp -R */ "${D}/usr/share/${PN}"
+
+	for executable in bq gcloud gcutil gcutil.cmd git-credential-gcloud.sh gsutil; do
+		dosym "/usr/share/${PN}/bin/${executable}" "/usr/bin/${executable}"
+	done
+
 	newenvd "${FILESDIR}/${PN}.env" "73${PN}"
 	dodoc ${DOCS}
 }
