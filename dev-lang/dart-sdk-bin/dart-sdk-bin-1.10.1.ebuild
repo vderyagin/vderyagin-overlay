@@ -29,7 +29,11 @@ src_unpack() {
 
 src_install() {
 	dodir "/opt/${PN}"
-	cp -R "bin" "include" "lib" "${D}/opt/${PN}"
-	newenvd "${FILESDIR}/${PN}-PATH.env" "81${PN}"
+	cp -R */ "${D}/opt/${PN}"
+
+	for executable in dart dart2js dartanalyzer dartdocgen dartfmt docgen pub; do
+		dosym "/opt/${PN}/bin/${executable}" "/opt/bin/${executable}"
+	done
+
 	dodoc ${DOCS}
 }
