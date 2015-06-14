@@ -6,7 +6,7 @@ EAPI=5
 
 DESCRIPTION="A CLI interface to the Heroku Platform API"
 HOMEPAGE="https://toolbelt.heroku.com"
-SRC_URI="https://github.com/heroku/heroku/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://googledrive.com/host/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE/${P}.tgz"
 RESTRICT="mirror"
 
 LICENSE="MIT"
@@ -16,8 +16,6 @@ IUSE=""
 
 RDEPEND="dev-lang/ruby:*"
 
-DOCS="CHANGELOG README.md RELEASE.md"
-
 src_unpack() {
 	unpack ${A}
 	mv */ "${S}"
@@ -26,6 +24,5 @@ src_unpack() {
 src_install() {
 	dodir "/usr/share/${PN}"
 	cp -R */ "${D}/usr/share/${PN}"
-	newenvd "${FILESDIR}/${PN}-PATH.env" "78${PN}"
-	dodoc ${DOCS}
+	dosym "/usr/share/${PN}/bin/heroku" /usr/bin/heroku
 }
