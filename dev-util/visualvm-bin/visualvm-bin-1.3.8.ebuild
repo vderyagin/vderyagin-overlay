@@ -29,5 +29,5 @@ src_prepare() {
 src_install() {
 	dodir "/opt/${PN}"
 	cp -R */ "${D}/opt/${PN}"
-	newenvd "${FILESDIR}/${PN}-PATH.env" "84${PN}"
+	dosym  "/opt/${PN}/bin/visualvm" "/opt/bin/visualvm"
 }
