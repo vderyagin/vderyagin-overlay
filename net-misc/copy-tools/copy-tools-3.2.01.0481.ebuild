@@ -30,6 +30,9 @@ src_install() {
 	dodir "/opt/${PN}"
 	cp -R ${subdir}/* "${D}/opt/${PN}"
 
-	newenvd "${FILESDIR}/${PN}-PATH.env" "82${PN}"
+	for tool in Agent Cmd Console; do
+		dosym "/opt/${PN}/Copy${tool}" "/opt/bin/Copy${tool}"
+	done
+
 	dodoc ${DOCS}
 }
