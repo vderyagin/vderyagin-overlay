@@ -4,11 +4,9 @@
 
 EAPI=5
 
-inherit java-pkg-2
-
 DESCRIPTION="Build tool for Scala and Java projects that aims to do the basics well"
 HOMEPAGE="http://scala-sbt.org"
-SRC_URI="https://dl.bintray.com/sbt/native-packages/sbt/${PV}/${P}.tgz"
+SRC_URI="https://dl.bintray.com/sbt/native-packages/sbt/${PV}/sbt-${PV}.tgz"
 RESTRICT="mirror"
 
 LICENSE="BSD"
@@ -20,10 +18,15 @@ RDEPEND="virtual/jre:*"
 
 src_unpack() {
 	unpack ${A}
-	mv ${PN} ${P}
+	mv */ ${P}
 }
 
 src_install() {
-	java-pkg_dojar "bin/sbt-launch.jar"
-	dobin "${FILESDIR}/sbt" "${FILESDIR}/screpl" "${FILESDIR}/scalas"
+	insinto /opt
+	doins bin/sbt-launch.jar
+
+	into /opt
+	for executable in sbt screpl scalas; do
+		dobin "${FILESDIR}/${executable}"
+	done
 }
