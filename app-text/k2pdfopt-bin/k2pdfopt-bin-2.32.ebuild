@@ -18,5 +18,6 @@ SLOT="0"
 IUSE=""
 
 src_install() {
-	dobin ${PN}
+	into /opt
+	dobin k2pdfopt
 }
