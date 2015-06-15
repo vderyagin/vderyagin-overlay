@@ -24,5 +24,6 @@ src_unpack() {
 }
 
 src_install() {
-	dobin "exercism"
+	into /opt
+	dobin exercism
 }
