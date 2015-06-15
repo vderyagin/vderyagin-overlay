@@ -25,5 +25,6 @@ src_unpack() {
 }
 
 src_install() {
+	into /opt
 	dobin ngrok
 }
