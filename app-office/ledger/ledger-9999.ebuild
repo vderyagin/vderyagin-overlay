@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit cmake-utils git-r3
+inherit git-r3
 
 DESCRIPTION="A double-entry accounting system with a command-line reporting interface"
 HOMEPAGE="http://ledger-cli.org"
@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://github.com/ledger/ledger.git"
 LICENSE="BSD"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="doc python"
+IUSE="python"
 
 RDEPEND="
 	>=dev-libs/boost-1.49[python?]
@@ -22,18 +22,16 @@ RDEPEND="
 	python? ( dev-lang/python:2.7 )
 "
 
-DEPEND="
-	${RDEPEND}
-	doc? (
-		>=app-doc/doxygen-1.5.7.1
-		>=media-gfx/graphviz-2.20.3
-		>=sys-apps/texinfo-4.13
-	)
-"
+DEPEND="${RDEPEND}"
 
 DOCS="README.md INSTALL.md CONTRIBUTING.md doc/GLOSSARY.md doc/NEWS"
 
-src_install() {
-	cmake-utils_src_install
-	doinfo doc/*.texi
+src_configure() {
+	if use python; then
+		python_flag=--python
+	else
+		python_flag=--no-python
+	fi
+
+	./acprep ${python_flag} --prefix="${ROOT}usr"
 }
