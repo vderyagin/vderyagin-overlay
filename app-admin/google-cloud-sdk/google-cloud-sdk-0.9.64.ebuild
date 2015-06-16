@@ -40,7 +40,7 @@ src_install() {
 		dosym "/usr/share/${PN}/bin/${executable}" "/usr/bin/${executable}"
 	done
 
-	newenvd "${FILESDIR}/${PN}.env" "73${PN}"
+	newenvd "${FILESDIR}/${PN}-CLOUDSDK_PYTHON.env" "73${PN}"
 	doman help/man/man1/*
 	dodoc ${DOCS}
 }
