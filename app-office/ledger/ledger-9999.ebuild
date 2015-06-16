@@ -35,3 +35,25 @@ src_configure() {
 
 	./acprep ${python_flag} --prefix="${ROOT}usr"
 }
+
+src_compile() {
+	default
+	emake doc
+
+	makeinfo doc/*.texi
+
+	for info_file in *.info*; do
+		install-info $info_file dir
+	done
+}
+
+src_install() {
+	default
+
+	keepdir "${ROOT}usr/share/info/ledger"
+	insinto "${ROOT}usr/share/info/ledger"
+
+	doins *.info* dir
+
+	newenvd "${FILESDIR}/${PN}-INFOPATH.env" "89${PN}"
+}
