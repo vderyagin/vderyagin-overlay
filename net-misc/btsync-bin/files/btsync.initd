@@ -12,6 +12,11 @@ start() {
   local started=""
   ebegin "Starting BitTorrent Sync"
 
+  if [ -z "${BTSYNC_USERS}" ]; then
+    eerror "No BTSYNC_USERS set in /etc/conf.d/btsync"
+    return 1
+  fi
+
   for user in ${BTSYNC_USERS}; do
     local homedir=$(eval echo ~${user})
 

@@ -33,3 +33,14 @@ src_install() {
 	newconfd "${FILESDIR}/btsync.conf" btsync
 	newinitd "${FILESDIR}/btsync.initd" btsync
 }
+
+pkg_postinst() {
+	elog ""
+	elog "To use BitTorrent Sync you need to create a configuration file:"
+	elog "btsync --dump-sample-config > ~/.btsync.conf"
+	elog "Set \"storage_path\" option there to existing directory"
+	elog ""
+	elog "List of user accounts for which BitTorrent Sync will be launched "
+	elog "can be set in /etc/conf.d/btsync"
+	elog ""
+}
