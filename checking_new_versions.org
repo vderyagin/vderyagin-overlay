@@ -24,3 +24,4 @@
   - download [[https://download-cdn.getsyncapp.com/stable/linux-i386/BitTorrent-Sync_i386.tar.gz][btsync-i386]] [[https://download-cdn.getsyncapp.com/stable/linux-x64/BitTorrent-Sync_x64.tar.gz][btsync-x64]] [[https://download-cdn.getsyncapp.com/stable/linux-arm/BitTorrent-Sync_arm.tar.gz][btsync-arm]]
   - add "-${PV}" to basenames
   - upload files to [[https://drive.google.com/drive/folders/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE][public Google Drive directory]]
+- [[https://github.com/commercialhaskell/stack/releases][dev-haskell/stack-bin]]
