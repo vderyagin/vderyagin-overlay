@@ -30,4 +30,6 @@ src_install() {
 	default
 	into /opt
 	dobin btsync
+	newconfd "${FILESDIR}/btsync.conf" btsync
+	newinitd "${FILESDIR}/btsync.initd" btsync
 }

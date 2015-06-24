@@ -1,0 +1,67 @@
+#! /sbin/runscript
+# Copyright 1999-2015 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+depend() {
+  need localmount net
+  after bootmisc
+}
+
+start() {
+  local started=""
+  ebegin "Starting BitTorrent Sync"
+
+  for user in ${BTSYNC_USERS}; do
+    local homedir=$(eval echo ~${user})
+
+    if test -d "${homedir}" && \
+        start-stop-daemon --start \
+                          --user ${user} \
+                          --verbose \
+                          --pidfile "${homedir}/.btsync/sync.pid" \
+                          --env HOME=${homedir} \
+                          --exec /opt/bin/btsync \
+                          -- --config "${homedir}/.btsync.conf"; then
+      started="${Started} ${user}"
+    else
+      eend $?
+      eerror "Failed to start BitTorrent Sync for ${user}"
+      if [ -n "${started}" ]; then
+        eerror "Stopping already started BitTorrent Sync"
+        BTSYNC_USERS=${started} stop
+      fi
+      return 1
+    fi
+  done
+
+  if [ -z "${started}" ];then
+    eerror "No BitTorrent Sync started"
+    eend 1
+  else
+    eend 0
+  fi
+}
+
+stop() {
+  local retval=0
+  ebegin "Stopping BitTorrent Sync"
+
+  for user in ${BTSYNC_USERS}; do
+    local homedir=$(eval echo ~${user})
+    start-stop-daemon --stop --pidfile "${homedir}/.btsync/sync.pid" || retval=$?
+  done
+  eend ${retval}
+}
+
+
+status() {
+  for user in ${BTSYNC_USERS}; do
+    local homedir=$(eval echo ~${user})
+    if [ -e "${homedir}/.btsync/sync.pid" ] ; then
+      echo "BitTorrent Sync for USER $user: running."
+    else
+      echo "BitTorrent Sync for USER $user: not running."
+    fi
+  done
+}
