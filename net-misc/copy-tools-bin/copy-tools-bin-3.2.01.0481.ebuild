@@ -9,7 +9,7 @@ HOMEPAGE="http://copy.com"
 SRC_URI="https://googledrive.com/host/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE/${P}.tar.gz"
 RESTRICT="mirror"
 
-LICENSE="public-domain"
+LICENSE="copy.com"
 KEYWORDS="~amd64 ~x86 ~arm"
 SLOT="0"
 IUSE=""

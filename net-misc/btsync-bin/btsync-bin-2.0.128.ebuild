@@ -13,7 +13,7 @@ SRC_URI="
 "
 RESTRICT="mirror"
 
-LICENSE="public-domain"
+LICENSE="btsync"
 KEYWORDS="~amd64 ~x86 ~arm"
 SLOT="0"
 IUSE=""
