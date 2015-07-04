@@ -7,8 +7,8 @@ EAPI=5
 DESCRIPTION="A Go based command line tool for http://exercism.io"
 HOMEPAGE="https://github.com/exercism/cli"
 SRC_URI="
-	amd64? ( https://github.com/exercism/cli/releases/download/v${PV}/exercism-linux-64bit.tgz )
-	x86?   ( https://github.com/exercism/cli/releases/download/v${PV}/exercism-linux-32bit.tgz )
+	amd64? ( https://github.com/exercism/cli/releases/download/v${PV}/exercism-linux-64bit.tgz -> ${P}-64.tgz )
+	x86?   ( https://github.com/exercism/cli/releases/download/v${PV}/exercism-linux-32bit.tgz -> ${P}-32.tgz )
 "
 RESTRICT="mirror"
 
