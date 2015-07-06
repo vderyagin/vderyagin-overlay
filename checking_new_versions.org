@@ -14,6 +14,7 @@
 - [[http://willus.com/k2pdfopt/download][app-text/k2pdfopt]]
 - [[http://www.scala-sbt.org/download.html][dev-java/sbt]]
 - [[https://www.dartlang.org/downloads/archive][dev-lang/dart-sdk-bin]]
+- [[http://pharo.org/gnu-linux-installation][dev-lang/pharo-bin]]
 - [[https://github.com/technomancy/leiningen/releases][dev-util/leiningen]]
 - [[http://visualvm.java.net/download.html][dev-util/visualvm-bin]]
 - net-misc/copy-tools

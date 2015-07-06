@@ -1,0 +1,25 @@
+diff --git a/pharo b/pharo
+index edc400d..ec8eade 100755
+--- a/pharo
++++ b/pharo
+@@ -4,7 +4,7 @@
+ DIR=`readlink -f $0` #resolve symlink
+ ROOT=`dirname $DIR` #obtain dir of the resolved path
+ LINUX="$ROOT/bin"
+-RESOURCES="$ROOT/shared"
++RESOURCES="${HOME}/.pharo/shared"
+ ICONS="$ROOT/icons"
+ 
+ # icon (note: gvfs-set-attribute is found in gvfs-bin on Ubuntu
+@@ -15,6 +15,11 @@ gvfs-set-attribute \
+ 	"file://$ICONS/Pharo.png" \
+ 		2> /dev/null
+ 
++if [ ! -d "$RESOURCES" ]; then
++	mkdir --parents "${HOME}/.pharo/shared"
++	cp "$ROOT/shared/"* "$HOME/.pharo/shared"
++fi
++
+ # zenity is part of GNOME
+ image_count=`ls "$RESOURCES"/*.image 2>/dev/null |wc -l`
+ if [ "$1" == "" ]; then 
