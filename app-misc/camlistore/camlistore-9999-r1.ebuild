@@ -26,4 +26,14 @@ src_compile() {
 src_install() {
 	cd bin
 	dobin camdeploy camget camlistored cammount camput camtool devcam hello publisher
+
+	newconfd "${FILESDIR}/camlistored.conf" camlistored
+	newinitd "${FILESDIR}/camlistored.initd" camlistored
+}
+
+pkg_postinst() {
+	elog ""
+	elog "List of user accounts for which Camlistore daemon will be launched "
+	elog "can be set in /etc/conf.d/camlistored"
+	elog ""
 }
