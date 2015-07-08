@@ -32,7 +32,7 @@ src_prepare() {
 }
 
 src_install() {
-	dodir "${ROOT}/opt/${PN}"
+	dodir "/opt/${PN}"
 	cp -R * "${D}/opt/${PN}"
 	dosym "/opt/${PN}/pharo" "/opt/bin/pharo"
 
