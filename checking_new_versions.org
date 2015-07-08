@@ -17,6 +17,7 @@
 - [[http://pharo.org/gnu-linux-installation][dev-lang/pharo-bin]]
 - [[https://github.com/technomancy/leiningen/releases][dev-util/leiningen]]
 - [[http://visualvm.java.net/download.html][dev-util/visualvm-bin]]
+- [[https://github.com/github/git-lfs/releases/][dev-vcs/git-lfs-bin]]
 - net-misc/copy-tools
   - download https://copy.com/install/linux/Copy.tgz
   - close currently running version of CopyAgent (if any)
