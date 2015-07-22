@@ -4,7 +4,7 @@
 
 EAPI=5
 
-DESCRIPTION="Programming language and IDE built for the electronic arts, new media art, and visual design communities"
+DESCRIPTION="Programming language and IDE for electronic arts, new media art, and visual design communities"
 HOMEPAGE="https://processing.org"
 SRC_URI="
 	amd64? ( http://download.processing.org/processing-2.2.1-linux64.tgz )
