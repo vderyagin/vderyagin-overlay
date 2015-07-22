@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Smalltalk IDE focused on simplicity and immediate feedback"
 HOMEPAGE="http://pharo.org"
-SRC_URI="http://files.pharo.org/platform/Pharo4.0-linux.zip"
+SRC_URI="http://files.pharo.org/platform/Pharo${PV}-linux.zip"
 
 RESTRICT="mirror"
 
