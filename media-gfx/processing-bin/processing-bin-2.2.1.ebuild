@@ -19,7 +19,7 @@ RESTRICT="mirror"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-DOCS="README"
+DOCS="revisions.txt"
 
 src_unpack() {
 	unpack ${A}
@@ -30,4 +30,6 @@ src_install() {
 	dodir "/opt/${PN}"
 	cp -R * "${D}/opt/${PN}"
 	dosym "/opt/${PN}/processing" "/opt/bin/processing"
+
+	default
 }
