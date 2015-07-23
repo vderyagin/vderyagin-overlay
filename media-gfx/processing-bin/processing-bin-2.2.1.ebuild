@@ -7,8 +7,8 @@ EAPI=5
 DESCRIPTION="Programming language and IDE for electronic arts, new media art, and visual design communities"
 HOMEPAGE="https://processing.org"
 SRC_URI="
-	amd64? ( http://download.processing.org/processing-2.2.1-linux64.tgz )
-	x86?   ( http://download.processing.org/processing-2.2.1-linux32.tgz )
+	amd64? ( http://download.processing.org/processing-${PV}-linux64.tgz )
+	x86?   ( http://download.processing.org/processing-${PV}-linux32.tgz )
 "
 
 LICENSE="GPL-2"
