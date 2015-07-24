@@ -30,7 +30,9 @@ src_unpack() {
 src_install() {
 	dodir "/opt/${PN}"
 	cp -R * "${D}/opt/${PN}"
-	dosym "/opt/${PN}/processing-java" "/opt/bin/processing"
+
+	dosym "/opt/${PN}/processing" "/opt/bin/processing"
+	dosym "/opt/${PN}/processing-java" "/opt/bin/processing-java"
 
 	default
 }
