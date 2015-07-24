@@ -12,11 +12,11 @@ SRC_URI="
 "
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="2"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
 
-DEPEND=""
+DEPEND="app-eselect/eselect-processing"
 RDEPEND="${DEPEND}"
 
 DOCS="revisions.txt"
@@ -27,11 +27,12 @@ src_unpack() {
 }
 
 src_install() {
-	dodir "/opt/${PN}"
-	cp -R * "${D}/opt/${PN}"
-
-	dosym "/opt/${PN}/processing" "/opt/bin/processing"
-	dosym "/opt/${PN}/processing-java" "/opt/bin/processing-java"
+	dodir "/opt/${PN}-${SLOT}"
+	cp -R * "${D}/opt/${PN}-${SLOT}"
 
 	default
+}
+
+pkg_postinst() {
+	eselect processing update --if-unset
 }
