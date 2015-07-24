@@ -1,0 +1,118 @@
+DESCRIPTION="Manage the /opt/bin/processing{,-java} symlinks"
+
+find_targets() {
+	local f
+	for f in "${EROOT}"/opt/processing-bin-[[:digit:]]; do
+		[[ -d ${f} ]] && basename "${f}"
+	done
+}
+
+remove_symlinks() {
+	rm --force "${EROOT}/opt/bin/processing" "${EROOT}/opt/bin/processing-java"
+}
+
+set_symlinks() {
+	local target=$1
+
+	if is_number "${target}"; then
+		local targets=( $(find_targets) )
+		target=${targets[target-1]}
+	fi
+
+	[[ -z ${target} || ! -d ${EROOT}/opt/${target} ]] \
+		&& die -q "Target \"$1\" doesn't appear to be valid!"
+
+	ln -s "${EROOT}/opt/${target}/processing" "${EROOT}/opt/bin/processing"
+	ln -s "${EROOT}/opt/${target}/processing-java" "${EROOT}/opt/bin/processing-java"
+}
+
+describe_show() {
+	echo "Show the current Processing version"
+}
+
+do_show() {
+	write_list_start "Current Processing version:"
+	if [[ -L ${EROOT}/opt/bin/processing && -L ${EROOT}/opt/bin/processing-java ]]; then
+		local processing=$(basename $(dirname "$(canonicalise "${EROOT}/opt/bin/processing")"))
+		write_kv_list_entry "${processing%/}" ""
+	else
+		write_kv_list_entry "(unset)" ""
+	fi
+}
+
+describe_list() {
+	echo "List available Processing versions"
+}
+
+do_list() {
+	local i targets=( $(find_targets) )
+
+	write_list_start "Available procesing versions:"
+	for (( i = 0; i < ${#targets[@]}; i++ )); do
+		# highlight the target where the symlink is pointing to
+		[[ ${targets[i]} = \
+			$(basename $(dirname "$(canonicalise "${EROOT}/opt/bin/processing")")) ]] \
+			&& targets[i]=$(highlight_marker "${targets[i]}")
+	done
+	write_numbered_list -m "(none found)" "${targets[@]}"
+}
+
+describe_set() {
+	echo "Set a new Processing version"
+}
+
+describe_set_parameters() {
+	echo "<target>"
+}
+
+describe_set_options() {
+	echo "target : Target name or number (from 'list' action)"
+}
+
+do_set() {
+	[[ -z $1 ]] && die -q "You didn't tell me what version of Processing you want"
+	[[ $# -gt 1 ]] && die -q "Too many parameters"
+
+	if [[ -L ${EROOT}/opt/bin/processing && -L ${EROOT}/opt/bin/processing-java ]]; then
+		remove_symlinks || die -q "Couldn't remove existing symlinks"
+		set_symlinks "$1" || die -q "Couldn't set a new symlinks"
+	elif [[ -e ${EROOT}/opt/bin/processing ]]; then
+		die -q "${EROOT}/opt/bin/processing exists but is not a symlink"
+	elif [[ -e ${EROOT}/opt/bin/processing-java ]]; then
+		die -q "${EROOT}/opt/bin/processing-java exists but is not a symlink"
+	else
+		set_symlinks "$1" || die -q "Couldn't set a new symlink"
+	fi
+}
+
+describe_update() {
+	echo "Switch to the most recent Processing version"
+}
+
+describe_update_options() {
+	echo "--if-unset    : Do not override existing setting"
+}
+
+do_update() {
+	local if_unset="0"
+	while [[ $# > 0 ]]; do
+		case "$1" in
+			--if-unset)
+				if_unset="1"
+				;;
+			*)
+				die -q "Unrecognized argument '$1'"
+				;;
+		esac
+		shift
+	done
+
+	if [[ "${if_unset}" == "1" && \
+				-L ${EROOT}/opt/bin/processing && \
+				-L ${EROOT}/opt/bin/processing-java ]]; then
+		return
+	fi
+
+	local targets=( $(find_targets) )
+	do_set ${#targets[@]}
+}
