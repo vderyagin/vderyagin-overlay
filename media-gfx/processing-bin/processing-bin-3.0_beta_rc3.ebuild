@@ -8,8 +8,8 @@ DESCRIPTION="Programming language and IDE for electronic arts, new media art, an
 HOMEPAGE="https://processing.org"
 
 SRC_URI="
-	amd64? ( http://download.processing.org/processing-3.0b1-linux64.tgz )
-	x86?   ( http://download.processing.org/processing-3.0b1-linux32.tgz )
+	amd64? ( http://download.processing.org/processing-3.0b3-linux64.tgz )
+	x86?   ( http://download.processing.org/processing-3.0b3-linux32.tgz )
 "
 
 LICENSE="GPL-2"
