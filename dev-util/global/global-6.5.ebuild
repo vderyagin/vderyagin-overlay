@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-inherit autotools eutils
+inherit eutils
 
 DESCRIPTION="GNU Global is a tag system to find the locations of a specified object in various sources"
 HOMEPAGE="http://www.gnu.org/software/global/global.html"
