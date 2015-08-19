@@ -1,3 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata></pkgmetadata>
+<pkgmetadata>
+  <use>
+    <flag name="sqlite3">
+      Use Sqlite 3 (<pkg>dev-db/sqlite</pkg>) make tag files
+    </flag>
+  </use>
+</pkgmetadata>

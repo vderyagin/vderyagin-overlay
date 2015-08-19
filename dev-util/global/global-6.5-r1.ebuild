@@ -14,22 +14,27 @@ RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="doc +sqlite3"
 
 RDEPEND="
 	|| ( dev-libs/libltdl:0 sys-devel/libtool:2 )
 	sys-libs/ncurses
 	dev-util/ctags
 	dev-python/pygments
+	sqlite3? ( dev-db/sqlite:3 )
 "
 
-DEPEND="${DEPEND}
-	doc? ( app-text/texi2html sys-apps/texinfo )"
+DEPEND="
+	${RDEPEND}
+	doc? ( app-text/texi2html sys-apps/texinfo )
+"
 
 DOCS="AUTHORS FAQ NEWS README THANKS"
 
 src_configure() {
-	econf --with-exuberant-ctags=/usr/bin/exuberant-ctags
+	econf \
+			--with-exuberant-ctags=/usr/bin/exuberant-ctags \
+			$(use_with sqlite3)
 }
 
 src_compile() {
