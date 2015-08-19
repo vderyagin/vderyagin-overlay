@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 DESCRIPTION="Bash script for split audio CD image files with cue sheet to tracks and write tags."
 HOMEPAGE="http://code.google.com/p/cue2tracks"
