@@ -41,6 +41,5 @@ src_install() {
 	done
 
 	newenvd "${FILESDIR}/${PN}-CLOUDSDK_PYTHON.env" "73${PN}"
-	doman help/man/man1/*
 	dodoc ${DOCS}
 }
