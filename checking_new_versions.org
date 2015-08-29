@@ -11,6 +11,7 @@
   - upload it to [[https://drive.google.com/drive/folders/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE][public Google Drive directory]]
   - copy latest ebuild with new name
 - [[https://github.com/exercism/cli/releases/][app-misc/exercism-bin]]
+- [[https://github.com/junegunn/fzf-bin/releases][app-misc/fzf-bin]]
 - [[http://rockbox.org/wiki/RockboxUtility#Download][app-misc/rbutil-bin]]
 - [[http://willus.com/k2pdfopt/download][app-text/k2pdfopt]]
 - [[http://www.scala-sbt.org/download.html][dev-java/sbt]]
