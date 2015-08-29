@@ -18,7 +18,7 @@ IUSE="doc +sqlite3"
 
 RDEPEND="
 	|| ( dev-libs/libltdl:0 sys-devel/libtool:2 )
-	sys-libs/ncurses
+	sys-libs/ncurses:5
 	dev-util/ctags
 	dev-python/pygments
 	sqlite3? ( dev-db/sqlite:3 )
