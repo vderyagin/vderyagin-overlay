@@ -26,9 +26,7 @@
 - [[https://github.com/github/git-lfs/releases/][dev-vcs/git-lfs-bin]]
 - net-misc/copy-tools
   - download https://copy.com/install/linux/Copy.tgz
-  - close currently running version of CopyAgent (if any)
-  - launch CopyAgent from archive
-  - tray icon context menu → Preferences… → About
+  - check =md5sum Copy.tgz=, current is =b8113bc03c452529711eaffe31648b18=
 - [[https://ngrok.com/download][net-misc/ngrok-bin]]
 - net-misc/btsync-bin
   - check version at https://getsync.com/platforms/desktop
