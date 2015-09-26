@@ -7,7 +7,7 @@ EAPI=5
 DESCRIPTION="A command-line fuzzy finder written in Go"
 HOMEPAGE="https://github.com/junegunn/fzf"
 SRC_URI="
-	amd64? ( https://github.com/junegunn/fzf-bin/releases/download/${PV}/fzf-${PV}-linux_amd64-static.tgz )
+	amd64? ( https://github.com/junegunn/fzf-bin/releases/download/${PV}/fzf-${PV}-linux_amd64.tgz )
 	x86?   ( https://github.com/junegunn/fzf-bin/releases/download/${PV}/fzf-${PV}-linux_386.tgz )
 "
 
