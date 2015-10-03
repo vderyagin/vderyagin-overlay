@@ -14,6 +14,10 @@
 - [[https://github.com/junegunn/fzf-bin/releases][app-misc/fzf-bin]]
 - [[http://rockbox.org/wiki/RockboxUtility#Download][app-misc/rbutil-bin]]
 - [[http://willus.com/k2pdfopt/download][app-text/k2pdfopt]]
+  - download "Linux 32-bit" and "Linux 64-bit" binaries
+  - pack them into k2pdfopt-bin_x86-${PV}.tar.gz and k2pdfopt-bin_amd64-${PV}.tar.gz
+  - upload archives to [[https://drive.google.com/drive/folders/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE][public Google Drive directory]]
+  - copy latest ebuild with new name
 - [[http://www.scala-sbt.org/download.html][dev-java/sbt]]
 - [[https://www.dartlang.org/downloads/archive][dev-lang/dart-sdk-bin]]
 - [[http://pharo.org/gnu-linux-installation][dev-lang/pharo-bin]]

@@ -17,6 +17,12 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
+src_unpack() {
+	mkdir "${S}"
+	cd "${S}"
+	unpack ${A}
+}
+
 src_install() {
 	into /opt
 	dobin k2pdfopt
