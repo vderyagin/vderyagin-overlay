@@ -26,6 +26,6 @@ src_install() {
 
 	if use zsh-completion ; then
 		insinto /usr/share/zsh/site-functions
-		doins _fq
+		doins _nq
 	fi
 }
