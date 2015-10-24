@@ -27,6 +27,10 @@ src_unpack() {
 	mv dart-sdk ${P}
 }
 
+src_prepare() {
+	chmod a+x bin/*
+}
+
 src_install() {
 	dodir "/opt/${PN}"
 	cp -R */ "${D}/opt/${PN}"
