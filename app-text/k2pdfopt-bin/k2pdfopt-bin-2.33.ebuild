@@ -4,7 +4,7 @@
 
 EAPI=5
 
-DESCRIPTION="K2pdfopt optimizes PDF/DJVU files for mobile e-readers (e.g. the Kindle) and smartphones"
+DESCRIPTION="Optimize PDF/DJVU files for mobile e-readers and smartphones"
 HOMEPAGE="http://www.willus.com/k2pdfopt"
 SRC_URI="
 	amd64? ( https://googledrive.com/host/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE/${PN}_amd64-${PV}.tar.gz )

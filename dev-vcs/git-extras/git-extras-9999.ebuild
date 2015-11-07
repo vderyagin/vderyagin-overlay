@@ -6,7 +6,7 @@ EAPI=5
 
 inherit git-r3
 
-DESCRIPTION="GIT utilities -- repo summary, repl, changelog population, author commit percentages and more"
+DESCRIPTION="Various Git utilities"
 HOMEPAGE="https://github.com/tj/git-extras"
 EGIT_REPO_URI="https://github.com/tj/git-extras.git"
 

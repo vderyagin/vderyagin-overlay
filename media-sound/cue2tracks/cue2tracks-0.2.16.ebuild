@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-DESCRIPTION="Bash script for split audio CD image files with cue sheet to tracks and write tags."
+DESCRIPTION="Bash script for split audio CD image files with cue sheet to tracks"
 HOMEPAGE="http://code.google.com/p/cue2tracks"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 RESTRICT="mirror"

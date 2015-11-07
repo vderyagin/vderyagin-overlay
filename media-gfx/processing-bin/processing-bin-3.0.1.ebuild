@@ -4,7 +4,7 @@
 
 EAPI=5
 
-DESCRIPTION="Programming language and IDE for electronic arts, new media art, and visual design communities"
+DESCRIPTION="Programming language & IDE for electronic arts, new media art, and visual design"
 HOMEPAGE="https://processing.org"
 
 SRC_URI="

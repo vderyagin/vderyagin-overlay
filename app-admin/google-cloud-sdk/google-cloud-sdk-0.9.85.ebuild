@@ -4,7 +4,7 @@
 
 EAPI=5
 
-DESCRIPTION="Tools and libraries for easy creation and managing resources on Google Cloud Platform"
+DESCRIPTION="Tools and libraries for creation and managing resources on Google Cloud Platform"
 HOMEPAGE="https://cloud.google.com/sdk"
 SRC_URI="https://googledrive.com/host/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE/${P}.tar.gz"
 RESTRICT="mirror"

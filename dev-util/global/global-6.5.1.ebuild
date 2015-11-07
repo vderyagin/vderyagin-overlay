@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit eutils
 
-DESCRIPTION="GNU Global is a tag system to find the locations of a specified object in various sources"
+DESCRIPTION="Tag system to find the locations of a specified object in various sources"
 HOMEPAGE="http://www.gnu.org/software/global/global.html"
 SRC_URI="http://tamacom.com/global/${P}.tar.gz"
 RESTRICT="mirror"
