@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="mirror"
 
-
 src_unpack() {
 	unpack ${A}
 	mv */ ${P}
