@@ -15,7 +15,10 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND="x11-libs/libxcb"
+RDEPEND="
+	x11-libs/libxcb
+	x11-libs/libwm
+"
 DEPEND="${RDEPEND}"
 
 DOCS="README.md"
