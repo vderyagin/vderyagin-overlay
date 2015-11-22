@@ -24,6 +24,6 @@ DEPEND="${RDEPEND}"
 DOCS="README.md"
 
 src_install() {
-	emake MANPREFIX="${ROOT}/usr/share/man" DESTDIR="${D}" install
+	emake PREFIX="/usr" MANPREFIX="${ROOT}/usr/share/man" DESTDIR="${D}" install
 	dodoc ${DOCS}
 }
