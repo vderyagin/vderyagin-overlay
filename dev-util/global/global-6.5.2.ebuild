@@ -14,11 +14,12 @@ RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +sqlite3"
+IUSE="doc +sqlite3 cscope"
 
 RDEPEND="
 	|| ( dev-libs/libltdl:0 sys-devel/libtool:2 )
 	sys-libs/ncurses:5
+	cscope? ( dev-util/cscope )
 	dev-util/ctags
 	dev-python/pygments
 	sqlite3? ( dev-db/sqlite:3 )
@@ -32,9 +33,14 @@ DEPEND="
 DOCS="AUTHORS FAQ NEWS README THANKS"
 
 src_configure() {
+	if ! use cscope; then
+		cscope_flag=--disable-gtagscscope
+	fi
+
 	econf \
 			--with-exuberant-ctags=/usr/bin/exuberant-ctags \
-			$(use_with sqlite3)
+			$(use_with sqlite3) \
+			$cscope_flag
 }
 
 src_compile() {
