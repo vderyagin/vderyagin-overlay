@@ -27,7 +27,7 @@ start() {
                           --pidfile "${homedir}/.btsync/sync.pid" \
                           --env HOME=${homedir} \
                           --exec /opt/bin/btsync \
-                          -- --config "${homedir}/.btsync.conf"; then
+                          -- --config "${homedir}/.config/btsync.json"; then
       started="${Started} ${user}"
     else
       eend $?

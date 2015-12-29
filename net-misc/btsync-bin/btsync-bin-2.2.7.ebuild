@@ -37,7 +37,7 @@ src_install() {
 pkg_postinst() {
 	elog ""
 	elog "To use BitTorrent Sync you need to create a configuration file:"
-	elog "btsync --dump-sample-config > ~/.btsync.conf"
+	elog "btsync --dump-sample-config > ~/.config/btsync.json"
 	elog "Set \"storage_path\" option there to existing directory"
 	elog ""
 	elog "List of user accounts for which BitTorrent Sync will be launched "
