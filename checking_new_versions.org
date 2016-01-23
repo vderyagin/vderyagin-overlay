@@ -29,9 +29,6 @@
 - [[https://github.com/technomancy/leiningen/releases][dev-util/leiningen]]
 - [[http://visualvm.java.net/download.html][dev-util/visualvm-bin]]
 - [[https://github.com/github/git-lfs/releases/][dev-vcs/git-lfs-bin]]
-- net-misc/copy-tools
-  - download https://copy.com/install/linux/Copy.tgz
-  - check =md5sum Copy.tgz=, current is =b8113bc03c452529711eaffe31648b18=
 - [[https://ngrok.com/download][net-misc/ngrok-bin]]
 - [[https://getsync.com/platforms/desktop][net-misc/btsync-bin]]
   - download versions for i386, x64, and arm
