@@ -15,7 +15,7 @@ RESTRICT="mirror"
 
 src_unpack() {
 	unpack ${A}
-	mv */ ${P}
+	mv tmp/*/ ${P}
 }
 
 src_install() {
