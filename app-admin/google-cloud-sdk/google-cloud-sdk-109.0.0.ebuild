@@ -6,7 +6,10 @@ EAPI=5
 
 DESCRIPTION="Tools and libraries for creation and managing resources on Google Cloud Platform"
 HOMEPAGE="https://cloud.google.com/sdk"
-SRC_URI="https://googledrive.com/host/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE/${P}.tar.gz"
+SRC_URI="
+	amd64? ( https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${P}-linux-x86_64.tar.gz )
+	x86?   ( https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${P}-linux-x86.tar.gz )
+"
 RESTRICT="mirror"
 
 LICENSE="Apache-2.0"

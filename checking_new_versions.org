@@ -1,9 +1,4 @@
-- app-admin/google-cloud-sdk
-  - download https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz
-  - look into lib/googlecloudsdk/core/config.json file in archive
-  - add "-${PV}" to basename
-  - upload it to [[https://drive.google.com/drive/folders/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE][public Google Drive directory]]
-  - copy latest ebuild with new name
+- [[https://cloud.google.com/sdk/downloads#versioned][app-admin/google-cloud-sdk]]
 - app-admin/heroku-cli
   - download https://s3.amazonaws.com/assets.heroku.com/heroku-client/heroku-client.tgz
   - look onti lib/heroku/version.rb
