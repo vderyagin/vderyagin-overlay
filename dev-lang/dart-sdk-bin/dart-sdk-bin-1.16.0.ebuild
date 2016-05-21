@@ -35,7 +35,7 @@ src_install() {
 	dodir "/opt/${PN}"
 	cp -R */ "${D}/opt/${PN}"
 
-	for executable in dart dart2js dartanalyzer dartdocgen dartfmt docgen pub; do
+	for executable in dart dart2js dartanalyzer dartdevc dartdoc dartfmt pub; do
 		dosym "/opt/${PN}/bin/${executable}" "/opt/bin/${executable}"
 	done
 
