@@ -16,6 +16,7 @@
 - [[https://processing.org/download/?processing][media-gfx/processing-bin]]
 - [[https://github.com/technomancy/leiningen/releases][dev-util/leiningen]]
 - [[http://visualvm.java.net/download.html][dev-util/visualvm-bin]]
+- [[https://slack.com/downloads][net-im/slack-bin]]
 - [[https://github.com/telegramdesktop/tdesktop/releases][net-im/telegram-bin]]
 - [[https://ngrok.com/download][net-misc/ngrok-bin]]
 - [[https://getsync.com/platforms/desktop][net-misc/btsync-bin]]
