@@ -18,16 +18,18 @@ RDEPEND="virtual/jdk:*"
 
 src_unpack() {
 	unpack ${A}
-	mv $(basename ${A} .zip) "${S}"
+	mv visualvm_138 "${S}"
 }
 
 src_prepare() {
-	rm -r profiler/lib/deployed
-	sed "30 ivisualvm_jdkhome=\$JDK_HOME" -i bin/visualvm || die
+	rm --recursive "${S}/profiler/lib/deployed"
+	rm "${S}"/**/*.{exe,dll}
+
+	sed "30 ivisualvm_jdkhome=\$JDK_HOME" --in-place bin/visualvm || die
 }
 
 src_install() {
 	dodir "/opt/${PN}"
-	cp -R */ "${D}/opt/${PN}"
+	cp --archive "${S}"/{bin,etc,platform,profiler,visualvm} "${D}/opt/${PN}"
 	dosym  "/opt/${PN}/bin/visualvm" "/opt/bin/visualvm"
 }
