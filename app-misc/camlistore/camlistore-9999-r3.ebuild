@@ -15,7 +15,7 @@ SLOT="0"
 
 IUSE=""
 
-DEPEND=">=dev-lang/go-1.1"
+DEPEND=">=dev-lang/go-1.6"
 
 EGIT_REPO_URI="https://github.com/camlistore/camlistore.git"
 
@@ -24,8 +24,7 @@ src_compile() {
 }
 
 src_install() {
-	cd bin
-	dobin camdeploy camget camlistored cammount camput camtool devcam hello publisher
+	dobin bin/{camdeploy,camget,camlistored,cammount,camput,camtool,publisher}
 
 	newconfd "${FILESDIR}/camlistored.conf" camlistored
 	newinitd "${FILESDIR}/camlistored.initd" camlistored
