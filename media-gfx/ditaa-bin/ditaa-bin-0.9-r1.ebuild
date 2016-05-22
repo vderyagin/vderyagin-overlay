@@ -19,14 +19,14 @@ RDEPEND="${DEPEND}"
 DOCS="HISTORY"
 
 src_unpack() {
-	mkdir ${P}
-	cd ${P}
+	mkdir "${S}"
+	cd "${S}"
 	unpack ${A}
 }
 
 src_install() {
 	dodir "/opt/${PN}"
-	cp -R *.jar "${D}/opt/${PN}/ditaa.jar"
+	cp --archive ditaa*.jar "${D}/opt/${PN}/ditaa.jar"
 
 	into /opt
 	dobin "${FILESDIR}/ditaa"
