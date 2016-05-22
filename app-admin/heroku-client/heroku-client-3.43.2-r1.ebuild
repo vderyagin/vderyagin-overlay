@@ -18,11 +18,11 @@ RDEPEND="dev-lang/ruby:*"
 
 src_unpack() {
 	unpack ${A}
-	mv */ "${S}"
+	mv "${PN}" "${S}"
 }
 
 src_install() {
 	dodir "/usr/share/${PN}"
-	cp -R */ "${D}/usr/share/${PN}"
+	cp --archive "${S}"/{bin,data,lib,vendor} "${D}/usr/share/${PN}"
 	dosym "/usr/share/${PN}/bin/heroku" /usr/bin/heroku
 }
