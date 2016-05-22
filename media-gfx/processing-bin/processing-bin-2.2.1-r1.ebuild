@@ -13,7 +13,7 @@ SRC_URI="
 "
 
 LICENSE="GPL-2"
-SLOT="3"
+SLOT="2"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
 
@@ -24,12 +24,20 @@ DOCS="revisions.txt"
 
 src_unpack() {
 	unpack ${A}
-	mv */ ${P}
+	mv "processing-${PV}" "${S}"
+}
+
+src_prepare() {
+	rm --recursive \
+		"${S}"/modes/java/libraries/serial/library/{linux-armv6hf,macosx,windows*} \
+		"${S}"/modes/java/application/launch4j/w32api
 }
 
 src_install() {
 	dodir "/opt/${PN}-${SLOT}"
-	cp -R * "${D}/opt/${PN}-${SLOT}"
+	cp --archive \
+		"${S}/"{core,java,lib,modes,tools,processing,processing-java} \
+		"${D}/opt/${PN}-${SLOT}"
 
 	default
 }

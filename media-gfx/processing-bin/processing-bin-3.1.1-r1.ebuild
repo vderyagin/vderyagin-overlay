@@ -6,13 +6,14 @@ EAPI=5
 
 DESCRIPTION="Programming language & IDE for electronic arts, new media art, and visual design"
 HOMEPAGE="https://processing.org"
+
 SRC_URI="
 	amd64? ( http://download.processing.org/processing-${PV}-linux64.tgz )
 	x86?   ( http://download.processing.org/processing-${PV}-linux32.tgz )
 "
 
 LICENSE="GPL-2"
-SLOT="2"
+SLOT="3"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
 
@@ -23,12 +24,20 @@ DOCS="revisions.txt"
 
 src_unpack() {
 	unpack ${A}
-	mv */ ${P}
+	mv "processing-${PV}" "${S}"
+}
+
+src_prepare() {
+	rm --recursive \
+		"${S}"/modes/java/libraries/serial/library/{linux-armv6hf,macosx,windows*} \
+		"${S}"/modes/java/application/launch4j/w32api
 }
 
 src_install() {
 	dodir "/opt/${PN}-${SLOT}"
-	cp -R * "${D}/opt/${PN}-${SLOT}"
+	cp --archive \
+		"${S}/"{core,java,lib,modes,tools,processing,processing-java} \
+		"${D}/opt/${PN}-${SLOT}"
 
 	default
 }
