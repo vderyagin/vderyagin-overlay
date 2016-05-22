@@ -24,20 +24,23 @@ DOCS="README revision version"
 
 src_unpack() {
 	unpack ${A}
-	mv dart-sdk ${P}
+	mv dart-sdk "${S}"
 }
 
 src_prepare() {
-	chmod a+x bin/*
+	chmod a+x "${S}"/bin/{dart,dart2js,dartanalyzer,dartdevc,dartdoc,dartfmt,pub}
 }
 
 src_install() {
-	dodir "/opt/${PN}"
-	cp -R */ "${D}/opt/${PN}"
+	default
+
+	dodir "/usr/share/${PN}"
+	cp --archive "${S}"/{bin,lib,util} "${D}/usr/share/${PN}"
+
+	dodir "/usr/include/${PN}"
+	cp --archive "${S}"/include/*.h "${D}/usr/include/${PN}"
 
 	for executable in dart dart2js dartanalyzer dartdevc dartdoc dartfmt pub; do
-		dosym "/opt/${PN}/bin/${executable}" "/opt/bin/${executable}"
+		dosym "/usr/share/${PN}/bin/${executable}" "/usr/bin/${executable}"
 	done
-
-	dodoc ${DOCS}
 }
