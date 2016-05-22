@@ -27,7 +27,10 @@ RDEPEND="
 
 DEPEND="
 	${RDEPEND}
-	doc? ( app-text/texi2html sys-apps/texinfo )
+	doc? (
+		app-text/texi2html
+		sys-apps/texinfo
+	)
 "
 
 DOCS="AUTHORS FAQ NEWS README THANKS"
@@ -45,8 +48,8 @@ src_configure() {
 
 src_compile() {
 	if use doc; then
-		texi2pdf -q -o doc/global.pdf doc/global.texi
-		texi2html -o doc/global.html doc/global.texi
+		texi2pdf --quiet --output=doc/global.pdf doc/global.texi
+		texi2html --output=doc/global.html doc/global.texi
 	fi
 
 	emake
