@@ -15,6 +15,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="virtual/jdk:*"
+DEPEND="sys-apps/findutils"
 
 src_unpack() {
 	unpack ${A}
@@ -23,7 +24,7 @@ src_unpack() {
 
 src_prepare() {
 	rm --recursive "${S}/profiler/lib/deployed"
-	rm "${S}"/**/*.{exe,dll}
+	find "${S}" -iname '*.dll' -or -iname '*.exe' -exec rm {} \;
 
 	sed "30 ivisualvm_jdkhome=\$JDK_HOME" --in-place bin/visualvm || die
 }
