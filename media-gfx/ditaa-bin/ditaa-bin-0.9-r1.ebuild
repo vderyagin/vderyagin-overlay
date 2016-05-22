@@ -26,7 +26,7 @@ src_unpack() {
 
 src_install() {
 	dodir "/opt/${PN}"
-	cp --archive ditaa*.jar "${D}/opt/${PN}/ditaa.jar"
+	cp --archive "${S}"/ditaa*.jar "${D}/opt/${PN}/ditaa.jar"
 
 	into /opt
 	dobin "${FILESDIR}/ditaa"
