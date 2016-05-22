@@ -36,13 +36,15 @@ src_compile() {
 }
 
 src_install() {
-	dodir "/usr/share/${PN}"
-	cp -R */ .*/ "${D}/usr/share/${PN}"
+	default
+	doman help/man/man1/*
 
-	for executable in bq gcloud git-credential-gcloud.sh gsutil; do
+	dodir "/usr/share/${PN}"
+	cp --archive "${S}"/{.install,bin,lib,platform} "${D}/usr/share/${PN}"
+
+	for executable in bq dev_appserver.py gcloud git-credential-gcloud.sh gsutil; do
 		dosym "/usr/share/${PN}/bin/${executable}" "/usr/bin/${executable}"
 	done
 
 	newenvd "${FILESDIR}/${PN}-CLOUDSDK_PYTHON.env" "73${PN}"
-	dodoc ${DOCS}
 }
