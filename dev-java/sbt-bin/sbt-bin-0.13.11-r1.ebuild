@@ -18,7 +18,7 @@ RDEPEND="virtual/jre:*"
 
 src_unpack() {
 	unpack ${A}
-	mv */ ${P}
+	mv sbt "${S}"
 }
 
 src_install() {
@@ -26,7 +26,5 @@ src_install() {
 	doins bin/sbt-launch.jar
 
 	into /opt
-	for executable in sbt screpl scalas; do
-		dobin "${FILESDIR}/${executable}"
-	done
+	dobin "${FILESDIR}/"{sbt,screpl,scalas}
 }
