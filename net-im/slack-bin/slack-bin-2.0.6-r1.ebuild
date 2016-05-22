@@ -32,6 +32,6 @@ src_unpack() {
 
 src_install(){
 	dodir "/opt/${PN}"
-	cp -R ./lib/slack/* "${D}/opt/${PN}"
+	cp --archive "${S}"/lib/slack/* "${D}/opt/${PN}"
 	dosym "/opt/${PN}/slack" "/opt/bin/slack"
 }

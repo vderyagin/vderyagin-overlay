@@ -17,12 +17,11 @@ KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
 
 src_unpack() {
-	mkdir "${S}"
-	cd "${S}"
 	unpack ${A}
+	mv Telegram "${S}"
 }
 
 src_install() {
 	into /opt
-	newbin Telegram/Telegram telegram
+	newbin Telegram telegram
 }

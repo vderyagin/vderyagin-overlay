@@ -16,8 +16,7 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	mkdir "${S}"
-	cd "${S}"
-	cp "${FILESDIR}/${PN}.c" .
+	cp "${FILESDIR}/${PN}.c" "${S}"
 }
 
 src_compile() {
