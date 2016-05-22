@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 DESCRIPTION="Manages multiple Processing versions"
 HOMEPAGE="https://processing.org"
@@ -16,7 +16,7 @@ DEPEND="app-admin/eselect"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-	mkdir "${P}"
+	mkdir "${S}"
 }
 
 src_install() {

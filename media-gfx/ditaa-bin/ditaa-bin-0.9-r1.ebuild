@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 DESCRIPTION="CLI utility that converts ascii-art diagrams to nice-looking bitmap diagrams"
 HOMEPAGE="http://ditaa.sourceforge.net"
@@ -25,11 +25,11 @@ src_unpack() {
 }
 
 src_install() {
+	einstalldocs
+
 	dodir "/opt/${PN}"
 	cp --archive "${S}"/ditaa*.jar "${D}/opt/${PN}/ditaa.jar"
 
 	into /opt
 	dobin "${FILESDIR}/ditaa"
-
-	default
 }

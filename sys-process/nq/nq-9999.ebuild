@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit git-r3
 
@@ -21,8 +21,8 @@ RDEPEND="${DEPEND}"
 DOCS="README.md"
 
 src_install() {
+	einstalldocs
 	emake PREFIX="${D}/usr" install
-	dodoc $DOCS
 
 	if use zsh-completion ; then
 		insinto /usr/share/zsh/site-functions

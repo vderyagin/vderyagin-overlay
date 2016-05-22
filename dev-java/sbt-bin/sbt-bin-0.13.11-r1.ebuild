@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 DESCRIPTION="Build tool for Scala and Java projects that aims to do the basics well"
 HOMEPAGE="http://scala-sbt.org"

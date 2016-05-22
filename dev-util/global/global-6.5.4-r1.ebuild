@@ -2,9 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="5"
-
-inherit eutils
+EAPI=6
 
 DESCRIPTION="Tag system to find the locations of a specified object in various sources"
 HOMEPAGE="http://www.gnu.org/software/global/global.html"
@@ -59,16 +57,15 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	if use doc; then
-		dohtml doc/global.html
+		dodoc doc/global.html
 		# doc/global.pdf is generated if tex executable (e.g. /usr/bin/tex) is available.
 		[[ -f doc/global.pdf ]] && dodoc doc/global.pdf
 	fi
 
-	dodoc ${DOCS}
+	einstalldocs
 
 	insinto /etc
 
 	doins gtags.conf
 	newenvd "${FILESDIR}/${PN}-configuration.env" "87${PN}"
-	prune_libtool_files
 }

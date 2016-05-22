@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 DESCRIPTION="Cloud-based mobile and desktop messaging app with a focus on security and speed"
 HOMEPAGE="https://telegram.org"

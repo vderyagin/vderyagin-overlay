@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 DESCRIPTION="Peer-to-peer file synchronisation tool using BitTorrent protocol."
 HOMEPAGE="https://getsync.com"
@@ -27,9 +27,11 @@ src_unpack() {
 }
 
 src_install() {
-	default
+	einstalldocs
+
 	into /opt
 	dobin btsync
+
 	newconfd "${FILESDIR}/btsync.conf" btsync
 	newinitd "${FILESDIR}/btsync.initd" btsync
 }

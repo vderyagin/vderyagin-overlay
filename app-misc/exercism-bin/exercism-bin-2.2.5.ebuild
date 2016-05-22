@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 DESCRIPTION="A Go based command line tool for http://exercism.io"
 HOMEPAGE="https://github.com/exercism/cli"

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 DESCRIPTION="Tool for automating Clojure projects without setting your hair on fire"
 HOMEPAGE="http://leiningen.org"

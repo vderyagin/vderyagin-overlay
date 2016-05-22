@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit git-r3
 
@@ -24,6 +24,6 @@ DEPEND="${RDEPEND}"
 DOCS="README.md"
 
 src_install() {
+	einstalldocs
 	emake PREFIX="/usr" MANPREFIX="${ROOT}/usr/share/man" DESTDIR="${D}" install
-	dodoc ${DOCS}
 }

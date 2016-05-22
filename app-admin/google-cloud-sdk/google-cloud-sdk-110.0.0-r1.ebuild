@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 DESCRIPTION="Tools and libraries for creation and managing resources on Google Cloud Platform"
 HOMEPAGE="https://cloud.google.com/sdk"
@@ -36,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	default
+	einstalldocs
 	doman help/man/man1/*
 
 	dodir "/usr/share/${PN}"

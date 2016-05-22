@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit git-r3
 
@@ -48,11 +48,13 @@ src_compile() {
 }
 
 src_install() {
+	einstalldocs
+
 	emake PREFIX="/usr" DESTDIR="${D}" install
 
 	if use gadgets ; then
 		emake -C gadgets PREFIX="/usr" DESTDIR="${D}" install
 		dobin gadgets/*.sh
-		dodoc gadgets/README*
+		dodoc -r gadgets
 	fi
 }

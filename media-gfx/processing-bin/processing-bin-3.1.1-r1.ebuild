@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 DESCRIPTION="Programming language & IDE for electronic arts, new media art, and visual design"
 HOMEPAGE="https://processing.org"
@@ -28,18 +28,20 @@ src_unpack() {
 }
 
 src_prepare() {
+	default
+
 	rm --recursive \
 		"${S}"/modes/java/libraries/serial/library/{linux-armv6hf,macosx,windows*} \
 		"${S}"/modes/java/application/launch4j/w32api
 }
 
 src_install() {
+	einstalldocs
+
 	dodir "/opt/${PN}-${SLOT}"
 	cp --archive \
 		"${S}/"{core,java,lib,modes,tools,processing,processing-java} \
 		"${D}/opt/${PN}-${SLOT}"
-
-	default
 }
 
 pkg_postinst() {

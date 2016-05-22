@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 DESCRIPTION="The Dart SDK, including the VM, dart2js, core libraries, and more"
 HOMEPAGE="https://dartlang.org"
@@ -28,11 +28,12 @@ src_unpack() {
 }
 
 src_prepare() {
+	default
 	chmod a+x "${S}"/bin/{dart,dart2js,dartanalyzer,dartdevc,dartdoc,dartfmt,pub}
 }
 
 src_install() {
-	default
+	einstalldocs
 
 	dodir "/usr/share/${PN}"
 	cp --archive "${S}"/{bin,lib,util} "${D}/usr/share/${PN}"
