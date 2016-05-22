@@ -18,7 +18,7 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	mv */ ${P}
+	mv flow "${S}"
 }
 
 src_install() {
