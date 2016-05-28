@@ -45,4 +45,5 @@ src_compile() {
 src_install() {
 	einstalldocs
 	doinfo ledger*.info*
+	default
 }
