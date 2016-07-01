@@ -16,7 +16,7 @@ IUSE="doc +sqlite3 cscope"
 
 RDEPEND="
 	|| ( dev-libs/libltdl:0 sys-devel/libtool:2 )
-	sys-libs/ncurses:5
+	sys-libs/ncurses:*
 	cscope? ( dev-util/cscope )
 	dev-util/ctags
 	dev-python/pygments
