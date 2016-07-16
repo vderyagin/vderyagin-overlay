@@ -8,7 +8,7 @@
 - [[https://github.com/exercism/cli/releases/][app-misc/exercism-bin]]
 - [[http://rockbox.org/wiki/RockboxUtility#Download][app-misc/rbutil-bin]]
 - [[http://www.scala-sbt.org/download.html][dev-java/sbt]]
-- [[https://www.dartlang.org/downloads/archive][dev-lang/dart-sdk-bin]]
+- [[https://www.dartlang.org/install/archive][dev-lang/dart-sdk-bin]]
 - [[http://www.gnu.org/software/global/download.html][dev-util/global]]
 - [[http://sourceforge.net/projects/ditaa/][media-gfx/ditaa-bin]]
 - [[https://processing.org/download/?processing][media-gfx/processing-bin]]
