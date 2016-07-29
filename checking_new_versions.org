@@ -5,6 +5,7 @@
   - add "-${PV}" to basename
   - upload it to [[https://drive.google.com/drive/folders/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE][public Google Drive directory]]
   - copy latest ebuild with new name
+- [[https://github.com/atom/atom/releases][app-editors/atom-bin]]
 - [[https://github.com/exercism/cli/releases/][app-misc/exercism-bin]]
 - [[http://rockbox.org/wiki/RockboxUtility#Download][app-misc/rbutil-bin]]
 - [[http://www.scala-sbt.org/download.html][dev-java/sbt]]
