@@ -7,9 +7,9 @@ EAPI=6
 inherit git-r3
 
 DESCRIPTION="A git remote helper for GPG-encrypted remotes."
-HOMEPAGE="https://github.com/joeyh/git-remote-gcrypt"
+HOMEPAGE="https://spwhitton.name/tech/code/git-remote-gcrypt"
 SRC_URI=""
-EGIT_REPO_URI="https://github.com/joeyh/git-remote-gcrypt"
+EGIT_REPO_URI="https://git.spwhitton.name/git-remote-gcrypt"
 
 LICENSE="GPL-3"
 SLOT="0"
