@@ -12,7 +12,7 @@ EGIT_REPO_URI="https://github.com/robm/dzen.git"
 
 LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
-SLOT="0"
+SLOT="2"
 IUSE="+xinerama +xpm +gadgets"
 
 RDEPEND="
