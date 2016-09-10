@@ -14,7 +14,6 @@
 - [[http://sourceforge.net/projects/ditaa/][media-gfx/ditaa-bin]]
 - [[https://processing.org/download/?processing][media-gfx/processing-bin]]
 - [[http://visualvm.java.net/download.html][dev-util/visualvm-bin]]
-- [[https://slack.com/downloads][net-im/slack-bin]]
 - [[https://ngrok.com/download][net-misc/ngrok-bin]]
 - [[https://getsync.com/platforms/desktop][net-misc/btsync-bin]]
   - download versions for i386, x64, and arm
