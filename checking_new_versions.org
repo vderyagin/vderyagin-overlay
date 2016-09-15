@@ -15,8 +15,4 @@
 - [[https://processing.org/download/?processing][media-gfx/processing-bin]]
 - [[http://visualvm.java.net/download.html][dev-util/visualvm-bin]]
 - [[https://ngrok.com/download][net-misc/ngrok-bin]]
-- [[https://getsync.com/platforms/desktop][net-misc/btsync-bin]]
-  - download versions for i386, x64, and arm
-  - add "-${PV}" to basenames
-  - upload files to [[https://drive.google.com/drive/folders/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE][public Google Drive directory]]
 - [[https://github.com/cortesi/devd/releases/latest][www-servers/devd-bin]]
