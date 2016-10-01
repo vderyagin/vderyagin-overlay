@@ -7,9 +7,9 @@ EAPI=6
 DESCRIPTION="Secure tunnels to localhost"
 HOMEPAGE="https://ngrok.com"
 SRC_URI="
-	amd64? ( https://drive.google.com/uc?export=download&id=0B1NdDtEdfiQpZjFQSzhXRGdRd2c -> ${P}-amd64.zip )
-	x86?   ( https://drive.google.com/uc?export=download&id=0B1NdDtEdfiQpYTJ4MkpaSlJRRzg -> ${P}-x86.zip )
-	arm?   ( https://drive.google.com/uc?export=download&id=0B1NdDtEdfiQpQjRuanc0ZWVSUzQ -> ${P}-arm.zip )
+	amd64? ( https://dl.dropboxusercontent.com/u/95298002/ngrok-stable-linux-amd64-${PV}.zip -> ${P}-amd64.zip )
+	x86?   ( https://dl.dropboxusercontent.com/u/95298002/ngrok-stable-linux-386-${PV}.zip -> ${P}-x86.zip )
+	arm?   ( https://dl.dropboxusercontent.com/u/95298002/ngrok-stable-linux-arm-${PV}.zip -> ${P}-arm.zip )
 "
 RESTRICT="mirror"
 

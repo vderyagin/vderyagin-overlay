@@ -3,8 +3,7 @@
   - download https://s3.amazonaws.com/assets.heroku.com/heroku-client/heroku-client.tgz
   - check version: =acat heroku-client.tgz heroku-client/lib/heroku/version.rb=
   - add "-${PV}" to basename
-  - upload it to [[https://drive.google.com/drive/folders/0B1NdDtEdfiQpflc4VFVMelBBRWJGb2x4bEFQdTVSZTZuOWpDWFZuTFNwVkoybjNfNVZLdUE][public Google Drive directory]]
-  - get direct link on https://sites.google.com/site/gdocs2direct
+  - upload it to [[https://www.dropbox.com/home/Public][Dropbox Public directory]]
   - adjust SRC_URI
   - copy latest ebuild with new name
 - [[https://github.com/atom/atom/releases][app-editors/atom-bin]]
