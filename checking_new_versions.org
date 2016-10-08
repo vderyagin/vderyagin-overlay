@@ -14,6 +14,6 @@
 - [[http://www.gnu.org/software/global/download.html][dev-util/global]]
 - [[http://sourceforge.net/projects/ditaa/][media-gfx/ditaa-bin]]
 - [[https://processing.org/download/?processing][media-gfx/processing-bin]]
-- [[http://visualvm.java.net/download.html][dev-util/visualvm-bin]]
+- [[https://visualvm.github.io/download.html][dev-util/visualvm-bin]]
 - [[https://ngrok.com/download][net-misc/ngrok-bin]]
 - [[https://github.com/cortesi/devd/releases/latest][www-servers/devd-bin]]
