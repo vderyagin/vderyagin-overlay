@@ -18,7 +18,7 @@ RDEPEND="virtual/jre:*"
 
 src_unpack() {
 	unpack ${A}
-	mv sbt "${S}"
+	mv sbt* "${S}"
 }
 
 src_install() {
