@@ -2,6 +2,7 @@
 /* See http://akshaal.livejournal.com/58473.html */
 
 /* Modified a little by Bzek .) */
+/* Modified a little more by Victor Deryagin (dropped emacs-related things) */
 
 /* Compilation: gcc -L/usr/X11R6/lib -lX11 -o emxkb emxkb.c */
 
@@ -22,16 +23,11 @@
 /* For locking a group */
 int lock_group (int window_id, int group);
 
-/* For sending a key to Emacs */
-int send_key_to_emacs (Display *display, int window_id, int group);
-
-
 /* Main function */
 int
 main (int argc, char *argv[]) {
 
     Display *display;
-    XClassHint class_hint;
     Window focus;
     int revert, group;
 
@@ -58,25 +54,9 @@ main (int argc, char *argv[]) {
         return -3;
     }
 
-    /* Get WM_CLASS */
-    XGetClassHint (display, focus, &class_hint);
-    /* printf ("WM_CLASS: %s\n", class_hint.res_name); */
-
-    if (class_hint.res_name != NULL
-        && !strncmp (class_hint.res_name, "emacs", strlen("emacs"))) {
-        /* Yeah, Emacs! Send a key. */
-        if (!send_key_to_emacs (display, focus, group)) {
-            fprintf (stderr, "%s: Failed during sending a key to Emacs\n", argv[0]);
-            return -4;
-        }
-
-        /* Change group to 0 (it should be "us") for Emacs */
-        group = 0;
-    }
-
     if (!lock_group (focus, group)) {
-        fprintf (stderr, "%s: Failed during locking group\n", argv[0]);
-        return -5;
+      fprintf (stderr, "%s: Failed during locking group\n", argv[0]);
+      return -5;
     }
 
     /* Close display */
@@ -85,60 +65,6 @@ main (int argc, char *argv[]) {
     /* That is all */
     return 0;
 }
-
-
-int
-send_key_to_emacs (Display *display, int window_id, int group) {
-
-    XKeyEvent event;
-
-    /* Init event */
-    memset (&event, 0, sizeof (event));
-    event.window = window_id;
-    event.display = display;
-    event.root = RootWindow (display, DefaultScreen (display));
-    event.state = 0;
-
-    switch (group) {
-    case 0:
-        event.keycode
-            = XKeysymToKeycode (display, XStringToKeysym ("F31"));
-        break;
-    case 1:
-        event.keycode
-            = XKeysymToKeycode (display, XStringToKeysym ("F32"));
-        break;
-    case 2:
-        event.keycode
-            = XKeysymToKeycode (display, XStringToKeysym ("F33"));
-        break;
-    default:
-        event.keycode
-            = XKeysymToKeycode (display, XStringToKeysym ("F31"));
-        break;
-    }
-
-    /* Send KeyPress event */
-    event.type = KeyPress;
-
-    if (!XSendEvent (display, window_id, False, 0, (XEvent *) &event)) {
-        fprintf (stderr, "send_key_to_emacs(): Can't send KeyPress event\n");
-        return -1;
-    }
-
-    /* Send KeyRelease event */
-    event.type = KeyRelease;
-
-    if (!XSendEvent (display, window_id, False, 0, (XEvent *) &event)) {
-        fprintf (stderr, "send_key_to_emacs(): Can't send KeyRelease event\n");
-        return -2;
-    }
-
-    XSync (display, False);
-
-    return 1;
-}
-
 
 int
 lock_group (int window_id, int group) {

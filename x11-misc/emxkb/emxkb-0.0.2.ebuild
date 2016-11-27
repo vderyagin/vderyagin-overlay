@@ -12,11 +12,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="x11-base/xorg-x11"
-RDEPEND="${DEPEND}"
+
+RDEPEND="
+	${DEPEND}
+	x11-apps/xprop
+	x11-misc/wmutils
+	x11-misc/xdotool
+"
 
 src_unpack() {
 	mkdir "${S}"
 	cp "${FILESDIR}/${PN}.c" "${S}"
+	cp "${FILESDIR}/switch_keyboard_layout" "${S}"
 }
 
 src_compile() {
@@ -24,5 +31,5 @@ src_compile() {
 }
 
 src_install() {
-	dobin "${PN}"
+	dobin "${PN}" switch_keyboard_layout
 }
