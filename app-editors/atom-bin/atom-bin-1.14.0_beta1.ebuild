@@ -6,7 +6,7 @@ EAPI=6
 
 DESCRIPTION="A hackable text editor for the 21st Century"
 HOMEPAGE="https://atom.io"
-SRC_URI="https://github.com/atom/atom/releases/download/v1.14.0-beta0/atom-amd64.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/atom/atom/releases/download/v1.14.0-beta1/atom-amd64.tar.gz -> ${P}.tar.gz"
 
 RESTRICT="mirror"
 LICENSE="MIT"
