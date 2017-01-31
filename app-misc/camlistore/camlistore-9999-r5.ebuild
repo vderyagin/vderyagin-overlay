@@ -19,12 +19,6 @@ DEPEND=">=dev-lang/go-1.6"
 
 EGIT_REPO_URI="https://github.com/camlistore/camlistore.git"
 
-src_prepare() {
-	default
-
-	sed --in-place 's/{7,7}/{7,8}/' make.go	# fix git 2.11 compatibility
-}
-
 src_compile() {
 	go run make.go || die "build failed"
 }
