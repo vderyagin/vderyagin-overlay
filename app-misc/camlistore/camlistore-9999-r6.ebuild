@@ -15,7 +15,7 @@ SLOT="0"
 
 IUSE=""
 
-DEPEND=">=dev-lang/go-1.6"
+DEPEND=">=dev-lang/go-1.8"
 
 EGIT_REPO_URI="https://github.com/camlistore/camlistore.git"
 
