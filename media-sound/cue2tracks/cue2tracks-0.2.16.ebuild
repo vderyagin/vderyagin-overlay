@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 DESCRIPTION="Bash script for split audio CD image files with cue sheet to tracks"
 HOMEPAGE="http://code.google.com/p/cue2tracks"
