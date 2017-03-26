@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION="GitKraken is the Git client designed to make you a more productive Git user"
 HOMEPAGE="https://gitkraken.com"
-SRC_URI="https://www.dropbox.com/s/jcjjl9lffpp8qnk/${P}.tar.gz"
+SRC_URI="https://www.dropbox.com/s/2zu6rx6cwfkh2w2/${P}.tar.gz"
 
 LICENSE="GitKraken-EULA"
 SLOT="0"
