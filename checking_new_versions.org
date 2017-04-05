@@ -6,6 +6,7 @@
   - upload it to [[https://www.dropbox.com/home/Public][Dropbox Public directory]]
   - adjust SRC_URI
   - copy latest ebuild with new name
+- [[https://www.terraform.io/downloads.html][app-admin/terraform-bin]]
 - [[https://github.com/atom/atom/releases][app-editors/atom-bin]]
 - [[https://github.com/exercism/cli/releases/][app-misc/exercism-bin]]
 - [[http://rockbox.org/wiki/RockboxUtility#Download][app-misc/rbutil-bin]]
