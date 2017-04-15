@@ -6,8 +6,8 @@ EAPI=6
 DESCRIPTION="Tool for building, changing, and versioning infrastructure"
 HOMEPAGE="https://terraform.io"
 SRC_URI="
-	amd64? ( https://releases.hashicorp.com/terraform/0.9.2/terraform_${PV}_linux_amd64.zip -> ${P}-64.zip )
-	x86?   ( https://releases.hashicorp.com/terraform/0.9.2/terraform_${PV}_linux_386.zip -> ${P}-32.zip )
+	amd64? ( https://releases.hashicorp.com/terraform/${PV}/terraform_${PV}_linux_amd64.zip )
+	x86?   ( https://releases.hashicorp.com/terraform/${PV}/terraform_${PV}_linux_386.zip )
 "
 
 LICENSE="MPL-2.0"
