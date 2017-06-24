@@ -13,7 +13,6 @@
 - [[http://www.scala-sbt.org/download.html][dev-java/sbt]]
 - [[https://www.dartlang.org/install/archive][dev-lang/dart-sdk-bin]]
 - [[http://www.gnu.org/software/global/download.html][dev-util/global]]
-- [[https://gitkraken.com/download][dev-vcs/gitkraken-bin]]
 - [[http://sourceforge.net/projects/ditaa/][media-gfx/ditaa-bin]]
 - [[https://processing.org/download/?processing][media-gfx/processing-bin]]
 - [[https://visualvm.github.io/download.html][dev-util/visualvm-bin]]

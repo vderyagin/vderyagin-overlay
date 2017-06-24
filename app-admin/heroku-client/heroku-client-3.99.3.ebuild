@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION="A CLI interface to the Heroku Platform API"
 HOMEPAGE="https://toolbelt.heroku.com"
-SRC_URI="https://www.dropbox.com/s/cshth6tktlotvwd/${P}.tgz"
+SRC_URI="https://www.dropbox.com/s/d48dug2gxp4o5l6/${P}.tgz"
 RESTRICT="mirror"
 
 LICENSE="MIT"
