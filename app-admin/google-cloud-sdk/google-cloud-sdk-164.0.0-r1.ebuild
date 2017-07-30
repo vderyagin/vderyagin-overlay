@@ -36,12 +36,11 @@ src_compile() {
 
 src_install() {
 	einstalldocs
-	doman help/man/man1/*
 
 	dodir "/usr/share/${PN}"
 	cp --archive "${S}"/{.install,bin,lib,platform} "${D}/usr/share/${PN}"
 
-	for executable in bq dev_appserver.py gcloud git-credential-gcloud.sh gsutil; do
+	for executable in bq dev_appserver.py docker-credential-gcloud endpointscfg.py gcloud git-credential-gcloud.sh gsutil; do
 		dosym "/usr/share/${PN}/bin/${executable}" "/usr/bin/${executable}"
 	done
 
