@@ -23,5 +23,5 @@ src_unpack() {
 src_install() {
 	dodir "/usr/share/${PN}"
 	cp --archive "${S}"/{bin,data,lib,vendor} "${D}/usr/share/${PN}"
-	dosym "/usr/share/${PN}/bin/heroku" /usr/bin/heroku
+	dosym "${D}/usr/share/${PN}/bin/heroku" /usr/bin/heroku
 }

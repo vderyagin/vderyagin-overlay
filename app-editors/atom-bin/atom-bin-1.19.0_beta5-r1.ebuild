@@ -38,5 +38,5 @@ src_install() {
 	dodir "/opt/${PN}"
 
 	cp --archive "${S}/"* "${D}/opt/${PN}"
-	dosym "/opt/${PN}/atom" "/opt/bin/atom"
+	dosym "${D}/opt/${PN}/atom" "/opt/bin/atom"
 }

@@ -41,7 +41,7 @@ src_install() {
 	cp --archive "${S}"/{.install,bin,lib,platform} "${D}/usr/share/${PN}"
 
 	for executable in bq dev_appserver.py docker-credential-gcloud endpointscfg.py gcloud git-credential-gcloud.sh gsutil; do
-		dosym "/usr/share/${PN}/bin/${executable}" "/usr/bin/${executable}"
+		dosym "${D}/usr/share/${PN}/bin/${executable}" "/usr/bin/${executable}"
 	done
 
 	newenvd "${FILESDIR}/${PN}-CLOUDSDK_PYTHON.env" "73${PN}"

@@ -41,6 +41,6 @@ src_install() {
 	cp --archive "${S}"/include/*.h "${D}/usr/include/${PN}"
 
 	for executable in dart dart2js dartanalyzer dartdevc dartdoc dartfmt pub; do
-		dosym "/usr/share/${PN}/bin/${executable}" "/usr/bin/${executable}"
+		dosym "${D}/usr/share/${PN}/bin/${executable}" "/usr/bin/${executable}"
 	done
 }

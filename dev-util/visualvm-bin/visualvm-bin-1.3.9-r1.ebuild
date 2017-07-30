@@ -33,5 +33,5 @@ src_prepare() {
 src_install() {
 	dodir "/opt/${PN}"
 	cp --archive "${S}"/{bin,etc,platform,profiler,visualvm} "${D}/opt/${PN}"
-	dosym  "/opt/${PN}/bin/visualvm" "/opt/bin/visualvm"
+	dosym  "${D}/opt/${PN}/bin/visualvm" "/opt/bin/visualvm"
 }

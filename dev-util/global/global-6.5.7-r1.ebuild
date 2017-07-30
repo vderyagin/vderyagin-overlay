@@ -4,7 +4,7 @@
 EAPI=6
 
 DESCRIPTION="Tag system to find the locations of a specified object in various sources"
-HOMEPAGE="http://www.gnu.org/software/global/global.html"
+HOMEPAGE="https://www.gnu.org/software/global/global.html"
 SRC_URI="http://tamacom.com/global/${P}.tar.gz"
 RESTRICT="mirror"
 
