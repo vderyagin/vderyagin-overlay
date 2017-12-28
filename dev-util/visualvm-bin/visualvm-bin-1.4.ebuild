@@ -5,7 +5,8 @@ EAPI=6
 
 DESCRIPTION="Visual tool integrating commandline JDK tools and profiling capabilities"
 HOMEPAGE="http://visualvm.java.net"
-SRC_URI="https://github.com/visualvm/visualvm.src/releases/download/1.3.9/visualvm_139.zip"
+SRC_URI="https://github.com/visualvm/visualvm.src/releases/download/1.4/visualvm_14.zip"
+
 RESTRICT="mirror"
 
 LICENSE="GPL-2"
@@ -18,7 +19,7 @@ DEPEND="sys-apps/findutils"
 
 src_unpack() {
 	unpack ${A}
-	mv visualvm_139 "${S}"
+	mv visualvm_14 "${S}"
 }
 
 src_prepare() {

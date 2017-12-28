@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION="Build tool for Scala and Java projects that aims to do the basics well"
 HOMEPAGE="http://scala-sbt.org"
-SRC_URI="https://cocl.us/sbt01316tgz -> ${P}.tgz"
+SRC_URI="https://github.com/sbt/sbt/releases/download/v${PV}/sbt-${PV}.tgz"
 RESTRICT="mirror"
 
 LICENSE="BSD"
@@ -17,7 +17,7 @@ RDEPEND="virtual/jre:*"
 
 src_unpack() {
 	unpack ${A}
-	mv sbt* "${S}"
+	mv sbt "${S}"
 }
 
 src_install() {
