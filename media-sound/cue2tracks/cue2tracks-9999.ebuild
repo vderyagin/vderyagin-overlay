@@ -1,10 +1,13 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
+EAPI=6
+
+inherit git-r3
+
 DESCRIPTION="Bash script for split audio CD image files with cue sheet to tracks"
-HOMEPAGE="http://code.google.com/p/cue2tracks"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
-RESTRICT="mirror"
+HOMEPAGE="https://github.com/ar-lex/cue2tracks"
+EGIT_REPO_URI="https://github.com/ar-lex/cue2tracks.git"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -41,6 +44,6 @@ RDEPEND="
 DOCS="AUTHORS INSTALL ChangeLog README TODO"
 
 src_install() {
-	dobin "${PN}"
 	dodoc ${DOCS}
+	dobin "${PN}"
 }
