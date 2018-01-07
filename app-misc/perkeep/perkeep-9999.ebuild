@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -6,7 +6,7 @@ EAPI=6
 inherit git-r3
 
 DESCRIPTION="Personal storage system for life"
-HOMEPAGE="http://camlistore.org"
+HOMEPAGE="http://perkeep.org"
 
 LICENSE="Apache-2.0"
 KEYWORDS="~amd64 ~x86"
@@ -16,14 +16,14 @@ IUSE=""
 
 DEPEND=">=dev-lang/go-1.8"
 
-EGIT_REPO_URI="https://github.com/camlistore/camlistore.git"
+EGIT_REPO_URI="https://github.com/perkeep/perkeep.git"
 
 src_compile() {
 	go run make.go || die "build failed"
 }
 
 src_install() {
-	dobin bin/{camdeploy,camget,camlistored,cammount,camput,camtool,publisher}
+	dobin bin/{pk-deploy,camget,camlistored,cammount,camput,camtool,publisher}
 
 	newconfd "${FILESDIR}/camlistored.conf" camlistored
 	newinitd "${FILESDIR}/camlistored.initd" camlistored
@@ -31,7 +31,7 @@ src_install() {
 
 pkg_postinst() {
 	elog ""
-	elog "List of user accounts for which Camlistore daemon will be launched"
+	elog "List of user accounts for which Perkeep daemon will be launched"
 	elog "can be set in /etc/conf.d/camlistored"
 	elog ""
 }
