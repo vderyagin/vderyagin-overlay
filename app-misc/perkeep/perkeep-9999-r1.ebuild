@@ -23,7 +23,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin bin/{pk-deploy,camget,camlistored,cammount,camput,camtool,publisher}
+	dobin bin/{pk-deploy,pk-mount,camget,camlistored,camput,camtool,publisher}
 
 	newconfd "${FILESDIR}/camlistored.conf" camlistored
 	newinitd "${FILESDIR}/camlistored.initd" camlistored
