@@ -14,7 +14,7 @@ SLOT="0"
 
 IUSE=""
 
-DEPEND="=dev-lang/go-1.9*"
+DEPEND="<dev-lang/go-1.10"
 
 EGIT_REPO_URI="https://github.com/perkeep/perkeep.git"
 
