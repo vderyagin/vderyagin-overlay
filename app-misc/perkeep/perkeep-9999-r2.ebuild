@@ -14,7 +14,10 @@ SLOT="0"
 
 IUSE=""
 
-DEPEND=">=dev-lang/go-1.8"
+DEPEND="
+	>=dev-lang/go-1.8
+	<dev-lang/go-1.10
+"
 
 EGIT_REPO_URI="https://github.com/perkeep/perkeep.git"
 
@@ -23,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin bin/{pk-deploy,pk-mount,camget,camlistored,camput,camtool,publisher}
+	dobin bin/{camget,camlistored,camput,devcam,pk,pk-deploy,pk-mount,publisher,scancab}
 
 	newconfd "${FILESDIR}/camlistored.conf" camlistored
 	newinitd "${FILESDIR}/camlistored.initd" camlistored
