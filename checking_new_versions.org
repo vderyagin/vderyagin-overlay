@@ -1,4 +1,4 @@
-- [[https://cloud.google.com/sdk/downloads#versioned][app-admin/google-cloud-sdk]]
+- [[https://cloud.google.com/sdk/docs/downloads-versioned-archives][app-admin/google-cloud-sdk]]
 - app-admin/heroku-cli
   - download https://s3.amazonaws.com/assets.heroku.com/heroku-client/heroku-client.tgz
   - check version: =acat heroku-client.tgz heroku-client/lib/heroku/version.rb=

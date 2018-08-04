@@ -5,7 +5,8 @@ EAPI=6
 
 DESCRIPTION="Build tool for Scala and Java projects that aims to do the basics well"
 HOMEPAGE="http://scala-sbt.org"
-SRC_URI="https://github.com/sbt/sbt/releases/download/v${PV}/sbt-${PV}.tgz"
+SRC_URI="https://piccolo.link/sbt-${PV}.tgz"
+
 RESTRICT="mirror"
 
 LICENSE="BSD"
