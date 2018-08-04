@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -12,18 +12,18 @@ EGIT_REPO_URI="https://github.com/robm/dzen.git"
 LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 SLOT="2"
-IUSE="+xinerama +xpm +gadgets"
+IUSE="+xinerama +xpm +gadgets +xft"
 
 RDEPEND="
 	x11-libs/libX11
+	xft? ( x11-libs/libXft )
 	xinerama? ( x11-libs/libXinerama )
 	xpm? ( x11-libs/libXpm )
 "
 DEPEND="
 	${RDEPEND}
 	virtual/pkgconfig
-	x11-proto/xproto
-	xinerama? ( x11-proto/xineramaproto )
+	x11-base/xorg-proto
 "
 
 DOCS="README CREDITS"
@@ -34,9 +34,16 @@ src_configure() {
 			-e '/^CFLAGS/s|$| -DDZEN_XINERAMA|' \
 			-i config.mk || die
 	fi
+
 	if use xpm ; then
 		sed -e '/^LIBS/s|$| -lXpm|' \
 			-e '/^CFLAGS/s|$| -DDZEN_XPM|' \
+			-i config.mk || die
+	fi
+
+	if use xft ; then
+		sed -e '/^LIBS/s|$| $(shell ${PKG_CONFIG} --libs xft)|' \
+			-e '/^CFLAGS/s|$| -DDZEN_XFT $(shell ${PKG_CONFIG} --cflags xft)|' \
 			-i config.mk || die
 	fi
 }
