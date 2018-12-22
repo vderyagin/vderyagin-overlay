@@ -5,5 +5,8 @@
     <flag name="sqlite3">
       Use Sqlite 3 (<pkg>dev-db/sqlite</pkg>) make tag files
     </flag>
+    <flag name="cscope">
+      Enable support for <pkg>dev-util/cscope</pkg> code browsing tool
+    </flag>
   </use>
 </pkgmetadata>

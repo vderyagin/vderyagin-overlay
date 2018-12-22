@@ -14,5 +14,8 @@
     <flag name="m4a">
       Support MPEG 4 Audio compression format
     </flag>
+    <flag name="shorten">
+      Enable support for <pkg>media-sound/shorten</pkg> audio compressor
+    </flag>
   </use>
 </pkgmetadata>

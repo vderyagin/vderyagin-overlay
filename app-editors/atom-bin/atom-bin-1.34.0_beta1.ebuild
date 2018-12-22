@@ -1,11 +1,11 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
 DESCRIPTION="A hackable text editor for the 21st Century"
 HOMEPAGE="https://atom.io"
-SRC_URI="https://github.com/atom/atom/releases/download/v1.31.0-beta1/atom-amd64.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/atom/atom/releases/download/v1.34.0-beta1/atom-amd64.tar.gz -> ${P}.tar.gz"
 
 RESTRICT="mirror"
 LICENSE="MIT"
