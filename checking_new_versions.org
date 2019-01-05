@@ -1,4 +1,3 @@
-- [[https://www.terraform.io/downloads.html][app-admin/terraform-bin]]
 - [[https://github.com/atom/atom/releases][app-editors/atom-bin]]
 - [[https://github.com/exercism/cli/releases/][app-misc/exercism-bin]]
 - [[http://www.gnu.org/software/global/download.html][dev-util/global]]
