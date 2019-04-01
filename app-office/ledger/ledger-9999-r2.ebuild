@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -23,7 +23,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 
-DOCS="README.md INSTALL.md CONTRIBUTING.md doc/GLOSSARY.md doc/NEWS"
+DOCS="README.md INSTALL.md CONTRIBUTING.md doc/GLOSSARY.md doc/NEWS.md"
 
 src_configure() {
 	if use python; then
