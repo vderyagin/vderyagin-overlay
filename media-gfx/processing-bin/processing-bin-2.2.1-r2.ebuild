@@ -1,7 +1,7 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 DESCRIPTION="Programming language & IDE for electronic arts, new media art, and visual design"
 HOMEPAGE="https://processing.org"
@@ -12,7 +12,7 @@ SRC_URI="
 "
 
 LICENSE="GPL-2"
-SLOT="3"
+SLOT="2"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
 
