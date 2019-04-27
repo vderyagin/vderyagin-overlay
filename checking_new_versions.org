@@ -1,4 +1,3 @@
-- [[https://github.com/atom/atom/releases][app-editors/atom-bin]]
 - [[https://github.com/exercism/cli/releases/][app-misc/exercism-bin]]
 - [[http://www.gnu.org/software/global/download.html][dev-util/global]]
 - [[https://sourceforge.net/projects/ditaa/files/ditaa][media-gfx/ditaa-bin]]
