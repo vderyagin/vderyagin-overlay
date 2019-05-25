@@ -6,8 +6,8 @@ EAPI=7
 inherit git-r3
 
 DESCRIPTION="Unix command line queue utility"
-HOMEPAGE="https://github.com/chneukirchen/nq"
-EGIT_REPO_URI="https://github.com/chneukirchen/nq.git"
+HOMEPAGE="https://github.com/leahneukirchen/nq"
+EGIT_REPO_URI="https://github.com/leahneukirchen/nq.git"
 
 LICENSE="public-domain"
 SLOT="0"
