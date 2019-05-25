@@ -7,8 +7,8 @@ DESCRIPTION="Secure tunnels to localhost"
 HOMEPAGE="https://ngrok.com"
 
 SRC_URI="
-	amd64? ( https://www.dropbox.com/s/82qzm85bupjih3a/ngrok-stable-linux-amd64-${PV}.zip -> ${P}-amd64.zip )
-	x86?   ( https://www.dropbox.com/s/m3idzt8ujuqu382/ngrok-stable-linux-386-${PV}.zip -> ${P}-x86.zip )
+	amd64? ( https://www.dropbox.com/s/rb8rfpwi63d1jhn/ngrok-stable-linux-amd64-${PV}.zip -> ${P}-amd64.zip )
+	x86?   ( https://www.dropbox.com/s/7q558etg9gncngk/ngrok-stable-linux-386-${PV}.zip -> ${P}-x86.zip )
 "
 RESTRICT="mirror"
 
