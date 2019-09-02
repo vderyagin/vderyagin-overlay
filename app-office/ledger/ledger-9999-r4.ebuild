@@ -32,7 +32,7 @@ src_configure() {
 		python_flag=--no-python
 	fi
 
-	./acprep ${python_flag} --prefix="${ROOT}usr"
+	./acprep ${python_flag} --prefix="${ROOT}/usr"
 }
 
 src_compile() {
