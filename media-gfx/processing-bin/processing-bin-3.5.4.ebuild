@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -6,14 +6,11 @@ EAPI=7
 DESCRIPTION="Programming language & IDE for electronic arts, new media art, and visual design"
 HOMEPAGE="https://processing.org"
 
-SRC_URI="
-	amd64? ( http://download.processing.org/processing-${PV}-linux64.tgz )
-	x86?   ( http://download.processing.org/processing-${PV}-linux32.tgz )
-"
+SRC_URI="http://download.processing.org/processing-${PV}-linux64.tgz"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 RESTRICT="mirror"
 
 DEPEND="app-eselect/eselect-processing"
