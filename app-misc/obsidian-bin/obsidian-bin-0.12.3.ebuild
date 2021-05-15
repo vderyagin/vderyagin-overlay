@@ -3,7 +3,7 @@
 
 EAPI=7
 
-DESCRIPTION="Powerful knowledge base that works on top of a local folder of plain text Markdown files"
+DESCRIPTION="Powerful knowledge base working on top of a local folder of Markdown files"
 HOMEPAGE="https://obsidian.md"
 SRC_URI="https://github.com/obsidianmd/obsidian-releases/releases/download/v${PV}/Obsidian-${PV}.AppImage -> ${P}"
 
