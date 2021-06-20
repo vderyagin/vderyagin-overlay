@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -24,5 +24,5 @@ DOCS="README.md"
 
 src_install() {
 	einstalldocs
-	emake PREFIX="/usr" MANPREFIX="${ROOT}/usr/share/man" DESTDIR="${D}" install
+	emake PREFIX="/usr" MANPREFIX="/usr/share/man" DESTDIR="${D}" install
 }
