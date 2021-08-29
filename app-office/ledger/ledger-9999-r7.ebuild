@@ -23,7 +23,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 
-DOCS="README.md INSTALL.md CONTRIBUTING.md doc/GLOSSARY.md doc/NEWS.md"
+DOCS="README.md INSTALL.md NEWS.md CONTRIBUTING.md doc/GLOSSARY.md"
 
 src_configure() {
 	if use python; then
