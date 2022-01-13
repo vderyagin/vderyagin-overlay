@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit go-module
+inherit go-module udev
 EGIT_COMMIT=6d65e2fac8c0b0ce6b582d4b5f3e572d2b531d16
 
 DESCRIPTION="Flash your ZSA Keyboard the EZ way"
@@ -55,9 +55,11 @@ src_compile() {
 
 src_install() {
 	einstalldocs
+	udev_dorules "${FILESDIR}/50-wally.rules"
 	dobin ${PN}
 }
 
 pkg_postinst() {
+	udev_reload
 	elog "Add your user to the plugdev group to be able to use ${PN}"
 }
