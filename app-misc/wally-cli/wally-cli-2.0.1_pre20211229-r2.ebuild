@@ -56,6 +56,7 @@ src_compile() {
 src_install() {
 	einstalldocs
 	udev_dorules "${FILESDIR}/50-wally.rules"
+	udev_dorules "${FILESDIR}/51-oryx.rules"
 	dobin ${PN}
 }
 
