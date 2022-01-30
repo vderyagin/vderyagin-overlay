@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="Programming language & IDE for electronic arts, new media art, and visual design"
 HOMEPAGE="https://processing.org"
 
-SRC_URI="https://github.com/processing/processing4/releases/download/processing-1277-4.0b2/processing-4.0b2-linux64.tgz"
+SRC_URI="https://github.com/processing/processing4/releases/download/processing-1279-4.0b4/processing-4.0b4-linux-x64.tgz"
 
 LICENSE="GPL-2"
 SLOT="4"
