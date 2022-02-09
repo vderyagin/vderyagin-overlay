@@ -1,0 +1,16 @@
+#! /sbin/openrc-run
+
+name="KBCT"
+description="KBCT is a Keyboard Customization Tool for Linux"
+pidfile=/var/run/kbct.pid
+
+depend() {
+  need udev
+  after bootmisc
+}
+
+start() {
+  ebegin "Starting KBCT"
+  start-stop-daemon --background --make-pidfile --pidfile $pidfile --start --exec /usr/bin/kbct -- remap --config /etc/kbct.yaml
+  eend $?
+}
