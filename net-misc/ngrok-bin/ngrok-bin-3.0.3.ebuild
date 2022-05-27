@@ -1,4 +1,4 @@
-# Copyright 2019-2021 Gentoo Authors
+# Copyright 2019-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="Secure introspectable tunnels to localhost"
 HOMEPAGE="https://ngrok.com"
 
-SRC_URI="https://dropbox.com/s/uefzgov6rlvjo99/ngrok-stable-linux-amd64-${PV}.zip"
+SRC_URI="https://lthfubkddme4zc4acplgkbgo-misc.s3.amazonaws.com/ngrok-v3-stable-linux-amd64-${PV}.tgz"
 RESTRICT="mirror"
 
 LICENSE="Apache-2.0"
