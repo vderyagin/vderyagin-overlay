@@ -1,0 +1,14 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DEPEND=x11-libs/libxcb x11-libs/libwm
+DESCRIPTION=Set of window manipulation tools
+EAPI=8
+HOMEPAGE=https://github.com/wmutils/core
+INHERIT=git-r3
+KEYWORDS=~amd64 ~x86
+LICENSE=ISC
+PROPERTIES=live
+RDEPEND=x11-libs/libxcb x11-libs/libwm
+SLOT=0
+_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=8599cc48d34795c41f7b8b98db59a879

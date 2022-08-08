@@ -1,0 +1,10 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=CLI utility that converts ascii-art diagrams to nice-looking bitmap diagrams
+EAPI=8
+HOMEPAGE=http://ditaa.sourceforge.net
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RESTRICT=mirror
+SLOT=0
+SRC_URI=http://downloads.sourceforge.net/project/ditaa/ditaa/0.9/ditaa0_9.zip?use_mirror=autoselect -> ditaa-bin-0.9.zip
+_md5_=49f2453e13076196e7ea2d3850f5e19e

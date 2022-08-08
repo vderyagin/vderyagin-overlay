@@ -1,0 +1,15 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install unpack
+DEPEND=>=dev-libs/boost-1.49[python?] >=dev-libs/gmp-4.2.2:* >=dev-libs/mpfr-2.4.0:* python? ( dev-lang/python:2.7 )
+DESCRIPTION=A double-entry accounting system with a command-line reporting interface
+EAPI=8
+HOMEPAGE=http://ledger-cli.org
+INHERIT=git-r3
+IUSE=python
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+PROPERTIES=live
+RDEPEND=>=dev-libs/boost-1.49[python?] >=dev-libs/gmp-4.2.2:* >=dev-libs/mpfr-2.4.0:* python? ( dev-lang/python:2.7 )
+SLOT=0
+_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=429f273577768ce79fa6d80ce1606f06

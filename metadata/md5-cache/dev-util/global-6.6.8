@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install
+DEPEND=|| ( dev-libs/libltdl:0 sys-devel/libtool:2 ) sys-libs/ncurses:* cscope? ( dev-util/cscope ) dev-util/ctags dev-python/pygments sqlite3? ( dev-db/sqlite:3 ) doc? ( app-text/texi2html sys-apps/texinfo )
+DESCRIPTION=Tag system to find the locations of a specified object in various sources
+EAPI=8
+HOMEPAGE=https://www.gnu.org/software/global/global.html
+IUSE=doc +sqlite3 cscope
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=|| ( dev-libs/libltdl:0 sys-devel/libtool:2 ) sys-libs/ncurses:* cscope? ( dev-util/cscope ) dev-util/ctags dev-python/pygments sqlite3? ( dev-db/sqlite:3 )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://ftp.gnu.org/pub/gnu/global/global-6.6.8.tar.gz
+_md5_=8217a0aa2b0595a01ae1d4c41d0f7c7c

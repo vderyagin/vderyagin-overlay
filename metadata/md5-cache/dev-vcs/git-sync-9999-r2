@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=Safe and simple one-script git synchronization
+EAPI=8
+HOMEPAGE=https://github.com/simonthum/git-sync
+INHERIT=git-r3
+KEYWORDS=~amd64 ~x86
+LICENSE=CC0-1.0
+PROPERTIES=live
+RDEPEND=dev-vcs/git
+SLOT=0
+_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=b986830ea55bb0729bca2e6b3d40569c

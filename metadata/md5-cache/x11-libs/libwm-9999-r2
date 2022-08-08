@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=A small library for X windows manipulation
+EAPI=8
+HOMEPAGE=https://github.com/wmutils/libwm
+INHERIT=git-r3
+KEYWORDS=~amd64 ~x86
+LICENSE=ISC
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=deaf24894b93b727755cd05a1ae8a4f0

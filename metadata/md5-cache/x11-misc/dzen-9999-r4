@@ -1,0 +1,15 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install unpack
+DEPEND=x11-libs/libX11 xft? ( x11-libs/libXft ) xinerama? ( x11-libs/libXinerama ) xpm? ( x11-libs/libXpm ) virtual/pkgconfig x11-base/xorg-proto
+DESCRIPTION=A general purpose messaging, notification and menuing program for X11
+EAPI=8
+HOMEPAGE=https://github.com/robm/dzen
+INHERIT=git-r3
+IUSE=+xinerama +xpm +gadgets +xft
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=x11-libs/libX11 xft? ( x11-libs/libXft ) xinerama? ( x11-libs/libXinerama ) xpm? ( x11-libs/libXpm )
+SLOT=2
+_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=adcd8cff215999576205dfec2a4946ba

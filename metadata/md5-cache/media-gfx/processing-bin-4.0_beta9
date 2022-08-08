@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst prepare unpack
+DEPEND=app-eselect/eselect-processing
+DESCRIPTION=Programming language & IDE for electronic arts, new media art, and visual design
+EAPI=8
+HOMEPAGE=https://processing.org
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=app-eselect/eselect-processing
+RESTRICT=mirror
+SLOT=4
+SRC_URI=https://github.com/processing/processing4/releases/download/processing-1284-4.0b9/processing-4.0b9-linux-x64.tgz
+_md5_=d06aff280739ce5a1c2344fd64db6c3d
