@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="Programming language & IDE for electronic arts, new media art, and visual design"
 HOMEPAGE="https://processing.org"
 
-SRC_URI="https://github.com/processing/processing4/releases/download/processing-1284-4.0b9/processing-4.0b9-linux-x64.tgz"
+SRC_URI="https://github.com/processing/processing4/releases/download/processing-1286-4.0.1/processing-4.0.1-linux-x64.tgz"
 
 LICENSE="GPL-2"
 SLOT="4"
@@ -15,8 +15,6 @@ RESTRICT="mirror"
 
 DEPEND="app-eselect/eselect-processing"
 RDEPEND="${DEPEND}"
-
-DOCS="changes.md"
 
 src_unpack() {
 	unpack ${A}
@@ -33,8 +31,6 @@ src_prepare() {
 }
 
 src_install() {
-	einstalldocs
-
 	dodir "/opt/${PN}-${SLOT}"
 	cp --archive \
 		"${S}/"{core,java,lib,modes,tools,processing,processing-java} \
