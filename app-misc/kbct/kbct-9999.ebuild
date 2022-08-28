@@ -11,7 +11,6 @@ EGIT_REPO_URI="https://github.com/samvel1024/kbct.git"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64"
 RESTRICT="mirror"
 
 RDEPEND="virtual/udev"

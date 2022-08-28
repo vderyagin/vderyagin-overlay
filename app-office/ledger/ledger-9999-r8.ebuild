@@ -10,7 +10,6 @@ HOMEPAGE="http://ledger-cli.org"
 EGIT_REPO_URI="https://github.com/ledger/ledger.git"
 
 LICENSE="BSD"
-KEYWORDS="~amd64 ~x86"
 SLOT="0"
 
 RDEPEND="

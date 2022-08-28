@@ -5,10 +5,9 @@ DESCRIPTION=A double-entry accounting system with a command-line reporting inter
 EAPI=8
 HOMEPAGE=http://ledger-cli.org
 INHERIT=git-r3
-KEYWORDS=~amd64 ~x86
 LICENSE=BSD
 PROPERTIES=live
 RDEPEND=>=dev-libs/boost-1.49 >=dev-libs/gmp-4.2.2:* >=dev-libs/mpfr-2.4.0:*
 SLOT=0
 _eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=30647b890dd2be9dc1d91dcfd65b33a6
+_md5_=08a9efaa2537ad7f36ca4b5ad62f964f
