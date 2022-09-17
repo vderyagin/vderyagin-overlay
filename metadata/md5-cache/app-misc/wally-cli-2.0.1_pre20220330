@@ -1,4 +1,4 @@
-BDEPEND=>=dev-lang/go-1.16 app-arch/unzip virtual/pkgconfig
+BDEPEND=>=dev-lang/go-1.18 app-arch/unzip virtual/pkgconfig
 DEFINED_PHASES=compile install postinst postrm unpack
 DEPEND=virtual/libusb:1
 DESCRIPTION=Flash your ZSA Keyboard the EZ way
@@ -11,5 +11,5 @@ RDEPEND=virtual/libusb:1
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/zsa/wally-cli/archive/53d9020158a10ad0ffb6bc89136476f5f3a8e72b.tar.gz -> wally-cli-2.0.1_pre20220330.tar.gz https://lthfubkddme4zc4acplgkbgo-misc.s3.amazonaws.com/wally-cli-2.0.1_pre20220330-deps.tar.xz
-_eclasses_=go-module	a13d34fe4e2996720e1ca6c53b9ea95a	toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	udev	f3a0a3964e2028a140c181f00eea9712
+_eclasses_=go-module	05668e36c51c78c9681fdf4aefa0abec	toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	udev	eec0bbab06977f1cfc5597269c1fa152
 _md5_=c08ec9203c33460a137b103fe67c226c
