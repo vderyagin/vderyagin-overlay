@@ -1,10 +1,10 @@
 DEFINED_PHASES=compile install unpack
-DEPEND=x11-base/xorg-x11
+DEPEND=x11-base/xorg-server
 DESCRIPTION=Keyboard layout switcher
 EAPI=8
 HOMEPAGE=http://rus.akshaal.info/2005/11/blog-post.html
 KEYWORDS=~amd64 ~x86
 LICENSE=public-domain
-RDEPEND=x11-base/xorg-x11
+RDEPEND=x11-base/xorg-server
 SLOT=0
-_md5_=bf0f666bcb2b903a5132554b96b77932
+_md5_=3e11b7c4b90f212b7745cfccca7ec44b

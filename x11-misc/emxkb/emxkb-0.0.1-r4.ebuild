@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -10,7 +10,7 @@ LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="x11-base/xorg-x11"
+DEPEND="x11-base/xorg-server"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
