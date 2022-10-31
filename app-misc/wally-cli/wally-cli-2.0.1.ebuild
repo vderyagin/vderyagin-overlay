@@ -4,7 +4,7 @@
 EAPI=8
 
 inherit go-module udev
-EGIT_COMMIT=53d9020158a10ad0ffb6bc89136476f5f3a8e72b
+EGIT_COMMIT=b0fafe52cc7fb9d55f2b968d4548c99917c7325c
 
 DESCRIPTION="Flash your ZSA Keyboard the EZ way"
 HOMEPAGE="https://ergodox-ez.com/pages/wally"
@@ -13,7 +13,7 @@ GO_DEPEND=">=dev-lang/go-1.14"
 
 SRC_URI="
 	https://github.com/zsa/wally-cli/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz
-	https://lthfubkddme4zc4acplgkbgo-misc.s3.amazonaws.com/${P}-deps.tar.xz
+	https://lthfubkddme4zc4acplgkbgo-misc.s3.amazonaws.com/${P}-vendor.tar.xz
 "
 
 LICENSE="MIT"
