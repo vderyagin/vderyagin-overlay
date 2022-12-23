@@ -6,4 +6,7 @@
        include saver_mpv module
     </flag>
   </use>
+  <upstream>
+    <remote-id type="github">google/xsecurelock</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -6,4 +6,8 @@
       Build and install dzen gadgets
     </flag>
   </use>
+
+  <upstream>
+    <remote-id type="github">robm/dzen</remote-id>
+  </upstream>
 </pkgmetadata>

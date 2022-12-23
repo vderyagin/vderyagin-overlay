@@ -18,4 +18,7 @@
       Enable support for <pkg>media-sound/shorten</pkg> audio compressor
     </flag>
   </use>
+  <upstream>
+    <remote-id type="github">ar-lex/cue2tracks</remote-id>
+  </upstream>
 </pkgmetadata>
