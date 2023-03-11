@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="Programming language & IDE for electronic arts, new media art, and visual design"
 HOMEPAGE="https://processing.org"
 
-SRC_URI="https://github.com/processing/processing4/releases/download/processing-1290-4.1.2/processing-4.1.2-linux-x64.tgz"
+SRC_URI="https://github.com/processing/processing4/releases/download/processing-1292-4.2/processing-4.2-linux-x64.tgz"
 
 LICENSE="GPL-2"
 SLOT="4"
