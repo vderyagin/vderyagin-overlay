@@ -7,5 +7,5 @@ KEYWORDS=~amd64
 LICENSE=MIT
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://releases.hashicorp.com/vagrant/2.3.7/vagrant_2.3.7_linux_amd64.zip
+SRC_URI=https://releases.hashicorp.com/vagrant/2.4.0/vagrant_2.4.0_linux_amd64.zip
 _md5_=2e73eb4c249e576a49ceb29c5221bf8b
