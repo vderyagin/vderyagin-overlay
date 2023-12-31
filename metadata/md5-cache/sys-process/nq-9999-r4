@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=Unix command line queue utility
+EAPI=8
+HOMEPAGE=https://github.com/leahneukirchen/nq
+INHERIT=git-r3
+IUSE=zsh-completion
+LICENSE=public-domain
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_md5_=86f035b496f8c42fd4ea84cad6d2a5c3
