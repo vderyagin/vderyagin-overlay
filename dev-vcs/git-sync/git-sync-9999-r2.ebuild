@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -11,7 +11,6 @@ EGIT_REPO_URI="https://github.com/simonthum/git-sync.git"
 
 LICENSE="CC0-1.0"
 SLOT="0"
-IUSE=""
 
 RDEPEND="dev-vcs/git"
 

@@ -8,4 +8,4 @@ RDEPEND=sys-fs/fuse
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/rfjakob/gocryptfs/releases/download/v2.4.0/gocryptfs_v2.4.0_linux-static_amd64.tar.gz
-_md5_=004cd5773ff0c39f4089fa813af8cefb
+_md5_=922bf27feea00ef9ed78e375d705fcf4

@@ -11,7 +11,6 @@ EGIT_REPO_URI="https://github.com/wmutils/core.git"
 
 LICENSE="ISC"
 SLOT="0"
-IUSE=""
 
 RDEPEND="
 	x11-libs/libxcb

@@ -9,4 +9,4 @@ PROPERTIES=live
 RDEPEND=dev-vcs/git
 SLOT=0
 _eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
-_md5_=b726332d28097fad8c991daa71d9788a
+_md5_=0b9462c900113427b40d1870cba8b2f2
